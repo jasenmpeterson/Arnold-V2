@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import { Actions } from "react-native-router-flux";
 import HTML from "react-native-render-html";
 import {
@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
   },
   buttonStyles: {
     width: responsiveWidth(95),
-    height: responsiveHeight(2),
+    height: responsiveHeight(6),
     justifyContent: "center",
     alignContent: "center"
   },
   buttonTextStyles: {
-    color: "#175492",
+    color: "#FFFFFF",
     textAlign: "center",
     fontSize: responsiveFontSize(1.5)
   },
@@ -56,8 +56,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     borderColor: "#175492",
     borderWidth: 1,
-    paddingTop: 15,
-    paddingBottom: 15,
     marginBottom: 15
   }
 });
@@ -66,14 +64,12 @@ const contentStyles = {
   classesStyles: {
     h2: {
       color: "#175492",
-      fontSize: responsiveFontSize(2),
       textAlign: "center"
     },
     h1: {
       color: "#AFC4D9",
       position: "relative",
       top: -35,
-      fontSize: responsiveFontSize(3),
       textAlign: "center"
     },
     p: {
@@ -89,16 +85,8 @@ const contentStyles = {
 
 const htmlHeader = `
 <h2 class="h2">HELPING VICTIMS OF</h2>
-<h1 class="h1">HURRICANE HARVEY</h1>
+<h1 class="h1" style="font-size: 2rem">HURRICANE HARVEY</h1>
 <p class="p">Who has been affected?</p>
-`;
-
-const htmlHomeOwnersBox = `
-<h1 class="homeOwnerBoxHeader">HURRICANE HARVEY</h1>
-`;
-
-const htmlBusinessOwnersBox = `
-<h1 class="homeOwnerBoxHeader">HURRICANE HARVEY</h1>
 `;
 
 export default class Home extends Component {
@@ -120,6 +108,7 @@ export default class Home extends Component {
                 buttonStyles={styles.buttonStyles}
                 buttonWrapStyles={styles.buttonWrapStyles}
                 buttonTextStyles={styles.buttonTextStyles}
+                showImage={true}
               />
               <Button
                 text={"BUSINESS OWNER"}
@@ -127,6 +116,7 @@ export default class Home extends Component {
                 buttonStyles={styles.buttonStyles}
                 buttonWrapStyles={styles.buttonWrapStyles}
                 buttonTextStyles={styles.buttonTextStyles}
+                showImage={true}
               />
             </View>
           </ScrollView>

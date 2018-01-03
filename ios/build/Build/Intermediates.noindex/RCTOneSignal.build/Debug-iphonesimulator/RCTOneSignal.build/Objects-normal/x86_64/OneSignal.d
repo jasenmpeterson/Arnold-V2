@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignal.m \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignal.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalInternal.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OSObservable.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalNotificationSettings.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OSPermission.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OSSubscription.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalTracker.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalHTTPClient.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalTrackIAP.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalLocation.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalReachability.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalJailbreakDetection.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalMobileProvision.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalAlertViewDelegate.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalHelper.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalWebView.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/UNUserNotificationCenter+OneSignal.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalSelectorHelpers.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/UIApplicationDelegate+OneSignal.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/NSString+OneSignal.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalNotificationSettingsIOS10.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalNotificationSettingsIOS8.h \
+  /Users/jasen/Projects/arnold_app_v2/node_modules/react-native-onesignal/ios/OneSignalNativeSDK/OneSignal/OneSignalNotificationSettingsIOS7.h

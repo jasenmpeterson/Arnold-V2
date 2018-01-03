@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Scene, Router, Reducer } from "react-native-router-flux";
 import OneSignal from "react-native-onesignal";
 import configureStore from "./store/configureStore";
+import landing from "./components/sections/landing/index";
 import home from "./components/sections/home/index";
 import residentialClaims from "./components/sections/residential/index";
 import residentialInsuranceClaims from "./components/sections/residentialClaims/index";
@@ -30,11 +31,13 @@ export default class App extends React.Component {
       <Router createReducer={reducerCreate}>
         <Provider store={store}>
           <View>
-            <Scene key="home" component={home} hideNavBar={true} initial />
+            <Scene key="landing" component={landing} hideNavBar={true} />
+            <Scene key="home" component={home} hideNavBar={true} />
             <Scene
               key="residential"
               component={residentialClaims}
               hideNavBar={true}
+              initial
             />
             <Scene
               key="residentialClaims"

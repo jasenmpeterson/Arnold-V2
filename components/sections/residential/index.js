@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   buttonStyles: {
     width: responsiveWidth(95),
-    height: responsiveHeight(2),
+    height: responsiveHeight(6),
     justifyContent: "center",
     alignContent: "center"
   },
@@ -68,17 +68,19 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: responsiveFontSize(1.5)
   },
+  buttonImageTextStyles: {
+    color: "#FFFFFF"
+  },
   buttonWrapStyles: {
     alignSelf: "center",
     borderColor: "#175492",
     borderWidth: 1,
-    paddingTop: 15,
-    paddingBottom: 15,
     marginBottom: 15
   },
   buttonSmallWrapStyles: {
     alignSelf: "center",
     borderColor: "#175492",
+    backgroundColor: "#FFFFFF",
     borderWidth: 1,
     paddingTop: 15,
     paddingBottom: 15,
@@ -88,7 +90,10 @@ const styles = StyleSheet.create({
     top: -30
   },
   boxContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: "center",
+    position: "relative",
+    top: 60
   },
   pageContent: {
     flexDirection: "column",
@@ -111,20 +116,49 @@ const styles = StyleSheet.create({
   },
   cta: {
     padding: 20
+  },
+  image: {
+    resizeMode: "cover",
+    position: "absolute",
+    left: 0,
+    top: 0,
+    flex: 1,
+    height: "100%",
+    width: "100%"
+  },
+  headerWrap: {
+    position: "relative",
+    zIndex: 2,
+    top: 50
+  },
+  headerContent: {
+    position: "relative",
+    top: 40
+  },
+  ctaImage: {
+    position: "absolute",
+    right: 15,
+    top: 20
+  },
+  question_mark_image: {
+    width: 75,
+    height: 75
   }
 });
 
 const contentStyles = {
   classesStyles: {
     h2: {
-      color: "#175492",
+      color: "#FFFFFF",
+      backgroundColor: "transparent",
       fontSize: responsiveFontSize(1.5),
       textAlign: "center"
     },
     h1: {
-      color: "#AFC4D9",
+      color: "#FFFFFF",
       position: "relative",
       top: -35,
+      backgroundColor: "transparent",
       fontSize: responsiveFontSize(3.5),
       textAlign: "center"
     },
@@ -150,7 +184,7 @@ const contentStyles = {
       fontSize: responsiveFontSize(3),
       position: "relative",
       top: -30,
-      lineHeight: 25
+      lineHeight: 30
     },
     contentParagraph: {
       color: "#95989A"
@@ -178,8 +212,8 @@ const contentStyles = {
 };
 
 const htmlHeader = `
-<h2 class="h2">HELPING HOMEOWNERS RECOVER AFTER</h2>
-<h1 class="h1">HURRICANE HARVEY</h1>
+<h2 class="h2" style="font-size: 0.9rem">HELPING HOMEOWNERS RECOVER AFTER</h2>
+<h1 class="h1" style="font-size: 2rem">HURRICANE HARVEY</h1>
 `;
 
 const htmlHomeOwnersBox = `
@@ -191,13 +225,13 @@ const htmlBusinessOwnersBox = `
 `;
 
 const htmlCTA = `
-<h2 class="ctaHeader">Affected by the Controlled Release of the Dams?</h2>
+<h2 class="ctaHeader">Affected by the<br/>Controlled Release<br/>of the Dams?</h2>
 <p class="ctaText">Releasing water from the reservoirs caused unthinkable damage. Let us stand up and fight for you.</p>
 `;
 
 const htmlPageContent = `
-<h2 class="contentSubHeader">RESIDENTIAL</h2>
-<h1 class="contentHeader">HARVEY INSURANCE CLAIMS</h1>
+<h2 class="contentSubHeader" style="font-size: 0.9rem">RESIDENTIAL</h2>
+<h1 class="contentHeader" style="font-size: 2rem">HARVEY<br/>INSURANCE CLAIMS</h1>
 <section class="contentWrap">
 <p class="contentParagraph first">We Are Texans.</p>
 <p class="contentParagraph second">Helping Each Other Is What We Do.</p>
@@ -236,8 +270,12 @@ export default class Home extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
-            <View style={[styles.contentWrap]}>
+          <View style={[styles.headerWrap]}>
+            <Image
+              style={styles.image}
+              source={require("../../../assets/images/landing_image.png")}
+            />
+            <View style={styles.headerContent}>
               <HTML
                 html={htmlHeader}
                 classesStyles={contentStyles.classesStyles}
@@ -250,6 +288,7 @@ export default class Home extends Component {
                 buttonStyles={styles.buttonStylesSmall}
                 buttonWrapStyles={styles.buttonSmallWrapStyles}
                 buttonTextStyles={styles.buttonTextStyles}
+                showImage={false}
               />
               <Button
                 text={"NEED HELP?"}
@@ -257,8 +296,11 @@ export default class Home extends Component {
                 buttonStyles={styles.buttonStylesSmall}
                 buttonWrapStyles={styles.buttonSmallWrapStyles}
                 buttonTextStyles={styles.buttonTextStyles}
+                showImage={false}
               />
             </View>
+          </View>
+          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
             <View style={[styles.pageContent]}>
               <HTML
                 html={htmlPageContent}
@@ -271,14 +313,22 @@ export default class Home extends Component {
                 action={Actions.residentialClaims}
                 buttonStyles={styles.buttonStyles}
                 buttonWrapStyles={styles.buttonWrapStyles}
-                buttonTextStyles={styles.buttonTextStyles}
+                buttonTextStyles={[
+                  styles.buttonTextStyles,
+                  styles.buttonImageTextStyles
+                ]}
+                showImage={true}
               />
               <Button
                 text={"Having Trouble With Your Insurance Claim?"}
                 action={Actions.contact}
                 buttonStyles={styles.buttonStyles}
                 buttonWrapStyles={styles.buttonWrapStyles}
-                buttonTextStyles={styles.buttonTextStyles}
+                buttonTextStyles={[
+                  styles.buttonTextStyles,
+                  styles.buttonImageTextStyles
+                ]}
+                showImage={true}
               />
             </View>
             <View style={[styles.ctaWrap]}>
@@ -286,6 +336,12 @@ export default class Home extends Component {
                 <HTML
                   html={htmlCTA}
                   classesStyles={contentStyles.classesStyles}
+                />
+              </View>
+              <View style={styles.ctaImage}>
+                <Image
+                  style={styles.question_mark_image}
+                  source={require("../../../assets/images/question_mark.png")}
                 />
               </View>
             </View>
@@ -300,7 +356,11 @@ export default class Home extends Component {
                 action={Actions.damRelease}
                 buttonStyles={styles.buttonStyles}
                 buttonWrapStyles={styles.buttonWrapStyles}
-                buttonTextStyles={styles.buttonTextStyles}
+                buttonTextStyles={[
+                  styles.buttonTextStyles,
+                  styles.buttonImageTextStyles
+                ]}
+                showImage={true}
               />
             </View>
             <View style={[styles.pageContent, styles.pageContent__B]}>
@@ -315,7 +375,11 @@ export default class Home extends Component {
                 action={Actions.residentialClaims}
                 buttonStyles={styles.buttonStyles}
                 buttonWrapStyles={styles.buttonWrapStyles}
-                buttonTextStyles={styles.buttonTextStyles}
+                buttonTextStyles={[
+                  styles.buttonTextStyles,
+                  styles.buttonImageTextStyles
+                ]}
+                showImage={true}
               />
             </View>
           </ScrollView>
