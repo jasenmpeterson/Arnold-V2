@@ -111,40 +111,59 @@ const styles = StyleSheet.create({
   },
   cta: {
     padding: 20
+  },
+  image: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    flex: 1
+  },
+  logo: {
+    width: 120,
+    height: 60.47
+  },
+  logoContainer: {
+    justifyContent: "center",
+    position: "relative",
+    top: -90
   }
 });
 
 const contentStyles = {
   classesStyles: {
     h2: {
-      color: "#175492",
+      color: "#FFFFFF",
       fontSize: responsiveFontSize(1.5),
-      textAlign: "center"
+      textAlign: "center",
+      backgroundColor: "transparent"
     },
     h1: {
-      color: "#AFC4D9",
+      color: "#FFFFFF",
       position: "relative",
       top: -35,
       fontSize: responsiveFontSize(3.5),
-      textAlign: "center"
+      textAlign: "center",
+      backgroundColor: "transparent"
     },
     p: {
       textAlign: "center",
-      color: "#95989A"
+      color: "#FFFFFF",
+      backgroundColor: "transparent"
     },
     contentSubHeader: {
-      color: "#175492",
+      color: "#FFFFFF",
       fontSize: responsiveFontSize(1.5)
     },
     contentHeader: {
-      color: "#175492",
+      color: "#FFFFFF",
       fontSize: responsiveFontSize(3),
       position: "relative",
       top: -30,
-      lineHeight: 25
+      lineHeight: 30
     },
     contentParagraph: {
-      color: "#95989A"
+      color: "#FFFFFF",
+      backgroundColor: "transparent"
     },
     third: {
       position: "relative",
@@ -178,8 +197,8 @@ const contentStyles = {
 };
 
 const htmlHeader = `
-<h2 class="h2">CONTACT US</h2>
-<h1 class="h1">888.400.2101</h1>
+<h2 class="h2" style="font-size: 0.9rem">CONTACT US</h2>
+<h1 class="h1" style="font-size: 2.5rem">888.400.2101</h1>
 `;
 
 const htmlPageContent = `
@@ -207,6 +226,11 @@ export default class Contact extends Component {
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
           <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+            <View style={[styles.image]}>
+              <Image
+                source={require("../../../assets/images/gradient_background.png")}
+              />
+            </View>
             <View style={[styles.contentWrap]}>
               <HTML
                 html={htmlHeader}
@@ -217,6 +241,12 @@ export default class Contact extends Component {
               <HTML
                 html={htmlPageContent}
                 classesStyles={contentStyles.classesStyles}
+              />
+            </View>
+            <View style={styles.logoContainer}>
+              <Image
+                style={styles.logo}
+                source={require("../../../assets/images/logo_full.png")}
               />
             </View>
           </ScrollView>

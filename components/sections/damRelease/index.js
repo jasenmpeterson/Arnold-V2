@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   buttonStyles: {
     width: responsiveWidth(95),
-    height: responsiveHeight(2),
+    height: responsiveHeight(6),
     justifyContent: "center",
     alignContent: "center"
   },
@@ -68,17 +68,19 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: responsiveFontSize(1.5)
   },
+  buttonImageTextStyles: {
+    color: "#FFFFFF"
+  },
   buttonWrapStyles: {
     alignSelf: "center",
     borderColor: "#175492",
     borderWidth: 1,
-    paddingTop: 15,
-    paddingBottom: 15,
     marginBottom: 15
   },
   buttonSmallWrapStyles: {
     alignSelf: "center",
     borderColor: "#175492",
+    backgroundColor: "#FFFFFF",
     borderWidth: 1,
     paddingTop: 15,
     paddingBottom: 15,
@@ -88,7 +90,10 @@ const styles = StyleSheet.create({
     top: -30
   },
   boxContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: "center",
+    position: "relative",
+    top: 60
   },
   pageContent: {
     flexDirection: "column",
@@ -111,20 +116,40 @@ const styles = StyleSheet.create({
   },
   cta: {
     padding: 20
+  },
+  image: {
+    resizeMode: "cover",
+    position: "absolute",
+    left: 0,
+    top: 0,
+    flex: 1,
+    height: "100%",
+    width: "100%"
+  },
+  headerWrap: {
+    position: "relative",
+    zIndex: 2,
+    top: 50
+  },
+  headerContent: {
+    position: "relative",
+    top: 40
   }
 });
 
 const contentStyles = {
   classesStyles: {
     h2: {
-      color: "#175492",
+      color: "#FFFFFF",
+      backgroundColor: "transparent",
       fontSize: responsiveFontSize(1.5),
       textAlign: "center"
     },
     h1: {
-      color: "#AFC4D9",
+      color: "#FFFFFF",
       position: "relative",
       top: -35,
+      backgroundColor: "transparent",
       fontSize: responsiveFontSize(3.5),
       textAlign: "center"
     },
@@ -134,23 +159,20 @@ const contentStyles = {
     },
     homeOwnerBoxHeader: {
       color: "#175492",
-      textAlign: "center",
-      fontSize: responsiveFontSize(1)
+      textAlign: "center"
     },
     contentWrap: {
       position: "relative",
       top: -30
     },
     contentSubHeader: {
-      color: "#175492",
-      fontSize: responsiveFontSize(1.5)
+      color: "#175492"
     },
     contentHeader: {
       color: "#175492",
-      fontSize: responsiveFontSize(3),
       position: "relative",
-      top: -30,
-      lineHeight: 25
+      lineHeight: 30,
+      marginBottom: 40
     },
     contentParagraph: {
       color: "#95989A"
@@ -166,8 +188,8 @@ const contentStyles = {
 };
 
 const htmlHeader = `
-<h2 class="h2">HELPING HOMEOWNERS RECOVER AFTER</h2>
-<h1 class="h1">HURRICANE HARVEY</h1>
+<h2 class="h2" style="font-size: 0.9rem">HELPING HOMEOWNERS RECOVER AFTER</h2>
+<h1 class="h1" style="font-size: 2rem">HURRICANE HARVEY</h1>
 `;
 
 const htmlHomeOwnersBox = `
@@ -184,7 +206,7 @@ const htmlCTA = `
 `;
 
 const htmlPageContent = `
-<h1 class="contentHeader">DAM RELEASE CLAIMS</h1>
+<h1 class="contentHeader" style="font-size: 2rem">DAM<br/>RELEASE CLAIMS</h1>
 <section class="contentWrap">
 <p class="contentParagraph">The San Jacinto River Basin contains multiple floodplains
 that put hundreds of thousands of Texas homes at risk
@@ -213,8 +235,12 @@ export default class Home extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
-            <View style={[styles.contentWrap]}>
+          <View style={[styles.headerWrap]}>
+            <Image
+              style={styles.image}
+              source={require("../../../assets/images/landing_image.png")}
+            />
+            <View style={styles.headerContent}>
               <HTML
                 html={htmlHeader}
                 classesStyles={contentStyles.classesStyles}
@@ -223,19 +249,23 @@ export default class Home extends Component {
             <View style={[styles.boxContainer]}>
               <Button
                 text={"GET ANSWERS"}
-                action={Actions.residentialClaims}
+                action={Actions.contact}
                 buttonStyles={styles.buttonStylesSmall}
                 buttonWrapStyles={styles.buttonSmallWrapStyles}
                 buttonTextStyles={styles.buttonTextStyles}
+                showImage={false}
               />
               <Button
                 text={"NEED HELP?"}
-                action={Actions.contactUs}
+                action={Actions.contact}
                 buttonStyles={styles.buttonStylesSmall}
                 buttonWrapStyles={styles.buttonSmallWrapStyles}
                 buttonTextStyles={styles.buttonTextStyles}
+                showImage={false}
               />
             </View>
+          </View>
+          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
             <View style={[styles.pageContent]}>
               <HTML
                 html={htmlPageContent}

@@ -31,13 +31,17 @@ export default class App extends React.Component {
       <Router createReducer={reducerCreate}>
         <Provider store={store}>
           <View>
-            <Scene key="landing" component={landing} hideNavBar={true} />
+            <Scene
+              key="landing"
+              component={landing}
+              hideNavBar={true}
+              initial
+            />
             <Scene key="home" component={home} hideNavBar={true} />
             <Scene
               key="residential"
               component={residentialClaims}
               hideNavBar={true}
-              initial
             />
             <Scene
               key="residentialClaims"
