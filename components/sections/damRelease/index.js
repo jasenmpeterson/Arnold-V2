@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   buttonTextStyles: {
     color: "#175492",
     textAlign: "center",
-    fontSize: responsiveFontSize(1.5)
+    fontSize: 14
   },
   buttonImageTextStyles: {
     color: "#FFFFFF"

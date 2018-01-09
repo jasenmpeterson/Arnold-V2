@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   scrollWrap: {
     alignItems: "center",
-    paddingTop: 70
+    paddingTop: 50
   },
   buttons: {
     justifyContent: "center",
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     color: "#175492"
   },
   accordionTextStyles: {
-    fontSize: responsiveFontSize(1.5),
+    fontSize: 14,
     color: "#95989A"
   },
   content: {
@@ -137,11 +137,11 @@ const styles = StyleSheet.create({
     position: "relative",
     zIndex: 2,
     top: 50,
-    height: responsiveHeight(20)
+    height: 150
   },
   headerContent: {
     position: "relative",
-    top: 40
+    top: 35
   }
 });
 
@@ -255,7 +255,7 @@ let contentTwo = (
     {"\n"}
     Homeowners with larger houses (and thus with more extensive damage) could{" "}
     <Text style={{ fontWeight: "bold" }}>
-      easily face six- or even seven-figure losses
+      easily face six or even seven-figure losses
     </Text>{" "}
     from Hurricane Harvey—losses that insurance companies are eager to shift
     completely onto your shoulders.

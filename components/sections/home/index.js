@@ -42,15 +42,15 @@ const styles = StyleSheet.create({
     top: -15
   },
   buttonStyles: {
-    width: responsiveWidth(95),
-    height: responsiveHeight(6),
+    width: 300,
+    height: 50,
     justifyContent: "center",
     alignContent: "center"
   },
   buttonTextStyles: {
     color: "#FFFFFF",
     textAlign: "center",
-    fontSize: responsiveFontSize(1.5)
+    fontSize: 16
   },
   buttonWrapStyles: {
     alignSelf: "center",
@@ -84,9 +84,9 @@ const contentStyles = {
 };
 
 const htmlHeader = `
-<h2 class="h2">HELPING VICTIMS OF</h2>
+<h2 class="h2" style="font-size: 0.9rem">HELPING VICTIMS OF</h2>
 <h1 class="h1" style="font-size: 2rem">HURRICANE HARVEY</h1>
-<p class="p">Who has been affected?</p>
+<p class="p" style="font-size: 1.2rem">Who has been affected?</p>
 `;
 
 export default class Home extends Component {

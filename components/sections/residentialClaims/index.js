@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   buttonTextStyles: {
     color: "#175492",
     textAlign: "center",
-    fontSize: responsiveFontSize(1.5)
+    fontSize: 14
   },
   buttonImageTextStyles: {
     color: "#FFFFFF"
@@ -162,8 +162,7 @@ const contentStyles = {
     },
     homeOwnerBoxHeader: {
       color: "#175492",
-      textAlign: "center",
-      fontSize: responsiveFontSize(1)
+      textAlign: "center"
     },
     contentWrap: {
       position: "relative",
@@ -215,11 +214,11 @@ const htmlHeader = `
 `;
 
 const htmlHomeOwnersBox = `
-<h1 class="homeOwnerBoxHeader">GET ANSWERS</h1>
+<h1 class="homeOwnerBoxHeader" style="font-size: 0.9rem">GET ANSWERS</h1>
 `;
 
 const htmlBusinessOwnersBox = `
-<h1 class="homeOwnerBoxHeader">NEED HELP TO FILE A CLAIM?</h1>
+<h1 class="homeOwnerBoxHeader" style="font-size: 0.9rem">NEED HELP TO FILE A CLAIM?</h1>
 `;
 
 const htmlCTA = `
@@ -229,7 +228,7 @@ const htmlCTA = `
 
 const htmlPageContent = `
 <h2 class="contentSubHeader" style="font-size: 0.9rem">RESIDENTIAL</h2>
-<h1 class="contentHeader" style="font-size: 2rem">HARVEY INSURANCE CLAIMS PROCESS</h1>
+<h1 class="contentHeader" style="font-size: 2rem">HARVEY INSURANCE<br/>CLAIMS PROCESS</h1>
 <section class="contentWrap">
 <p class="contentParagraph">The process for filing a claim should be fairly
 straightforward. First, you call an insurance company to

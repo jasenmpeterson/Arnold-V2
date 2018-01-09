@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   icon: {
-    width: responsiveWidth(5),
-    height: responsiveHeight(2),
+    width: 25,
+    height: 25,
     marginBottom: 5
   },
   homeIcon: {
-    width: responsiveWidth(10),
-    height: responsiveHeight(5)
+    width: 45,
+    height: 42.7
   },
   tabContainer: {
     alignItems: "stretch",

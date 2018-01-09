@@ -5,7 +5,8 @@ import {
   StyleSheet,
   ScrollView,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  Dimensions
 } from "react-native";
 import axios from "axios";
 import { Actions } from "react-native-router-flux";
@@ -17,6 +18,9 @@ import {
 } from "react-native-responsive-dimensions";
 import TabsView from "../../tabsBar";
 import Button from "../../button";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   wrap: {
@@ -47,59 +51,83 @@ const styles = StyleSheet.create({
   },
   h2: {
     fontSize: responsiveFontSize(2)
+  },
+  backgroundImage: {
+    flex: 1
   }
 });
 
-export default class Landing extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoading: true,
-      response: []
-    };
-  }
-  componentDidMount() {
-    return axios
-      .get("http://192.168.0.235:9999/landing")
-      .then(response => {
-        let ds = response;
-        console.log(ds);
-        this.setState({
-          isLoading: false,
-          response: response.data
-        });
-      })
-      .catch(error => {
-        console.warn(error);
-      });
-  }
-  _renderLanding() {
-    if (this.state.isLoading) {
-      return (
-        <View>
-          <Text>Loading...</Text>
-        </View>
-      );
+const contentStyles = {
+  classesStyles: {
+    h2: {
+      color: "#FFFFFF",
+      textAlign: "center",
+      backgroundColor: "transparent",
+      fontSize: 20
+    },
+    h1: {
+      color: "#FFFFFF",
+      position: "relative",
+      top: -35,
+      textAlign: "center",
+      backgroundColor: "transparent"
     }
+  }
+};
+
+const htmlHeader = `
+<h2 class="h2">HELPING VICTIMS OF</h2>
+<h1 class="h1" style="font-size: 2rem">HURRICANE HARVEY</h1>
+`;
+
+export default class Landing extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     isLoading: true,
+  //     response: []
+  //   };
+  // }
+  // componentDidMount() {
+  //   return axios
+  //     .get("http://192.168.0.235:9999/landing")
+  //     .then(response => {
+  //       let ds = response;
+  //       this.setState({
+  //         isLoading: false,
+  //         response: response.data
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.warn(error);
+  //     });
+  // }
+  _renderLanding() {
+    // if (this.state.isLoading) {
+    //   return (
+    //     <View>
+    //       <Text>Loading...</Text>
+    //     </View>
+    //   );
+    // }
 
     return (
       <TouchableHighlight onPress={Actions.home} style={[styles.wrap]}>
         <ScrollView contentContainerStyle={[styles.scrollWrap]}>
           <View style={[styles.image]}>
             <Image
+              style={[styles.backgroundImage]}
               source={require("../../../assets/images/landing_image.png")}
             />
           </View>
-          {
-            <View style={[styles.contentWrap]}>
-              <Text style={[styles.h2, styles.textColor]}>
-                {this.state.response[0].subHeader}
-              </Text>
-              <Text style={[styles.h1, styles.textColor]}>
-                {this.state.response[0].header}
-              </Text>
+          <View style={[styles.contentWrap]}>
+            <View>
+              <HTML
+                html={htmlHeader}
+                classesStyles={contentStyles.classesStyles}
+              />
             </View>
-          }
+          </View>
         </ScrollView>
       </TouchableHighlight>
     );

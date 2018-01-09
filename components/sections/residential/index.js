@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     top: -65
   },
   buttonStyles: {
-    width: responsiveWidth(95),
-    height: responsiveHeight(6),
+    width: 300,
+    height: 50,
     justifyContent: "center",
     alignContent: "center"
   },
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   buttonTextStyles: {
     color: "#175492",
     textAlign: "center",
-    fontSize: responsiveFontSize(1.5)
+    fontSize: 14
   },
   buttonImageTextStyles: {
     color: "#FFFFFF"
@@ -108,14 +108,14 @@ const styles = StyleSheet.create({
   ctaWrap: {
     justifyContent: "center",
     width: responsiveWidth(95),
-    height: responsiveHeight(25),
     position: "relative",
     backgroundColor: "#343434",
     zIndex: 5,
-    top: 45
-  },
-  cta: {
-    padding: 20
+    top: 45,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 40,
+    paddingBottom: 40
   },
   image: {
     resizeMode: "cover",
@@ -141,8 +141,9 @@ const styles = StyleSheet.create({
     top: 20
   },
   question_mark_image: {
-    width: 75,
-    height: 75
+    marginTop: 10,
+    width: 52,
+    height: 65
   }
 });
 
@@ -225,8 +226,8 @@ const htmlBusinessOwnersBox = `
 `;
 
 const htmlCTA = `
-<h2 class="ctaHeader">Affected by the<br/>Controlled Release<br/>of the Dams?</h2>
-<p class="ctaText">Releasing water from the reservoirs caused unthinkable damage. Let us stand up and fight for you.</p>
+<h2 class="ctaHeader" style="font-size: 2rem">Affected by the<br/>Controlled Release<br/>of the Dams?</h2>
+<p class="ctaText" style="font-size: 1.2rem;">Releasing water from the reservoirs caused unthinkable damage. Let us stand up and fight for you.</p>
 `;
 
 const htmlPageContent = `
@@ -347,7 +348,7 @@ export default class Home extends Component {
             </View>
             <View>
               <Image
-                source={require("../../../assets/images/google_map.jpg")}
+                source={require("../../../assets/images/google_map.png")}
               />
             </View>
             <View style={[styles.gmapButton]}>
