@@ -22,7 +22,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		2A29A2DAD56B4616A87CACB9 /* libRCTOneSignal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17772CB2D60A4E1BB90FBF92 /* libRCTOneSignal.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -35,8 +34,8 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* arnold_app_v2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* arnold_app_v2Tests.m */; };
-		4F3304845B7FAE4A12BBE73A /* libPods-arnold_app_v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70529F6174C2E0D754F73FA9 /* libPods-arnold_app_v2.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		9322108C2005690C004184FD /* libRCTOneSignal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C0F61F2005677E00506870 /* libRCTOneSignal.a */; };
 		937C21532005286E00F5D2DF /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
@@ -231,6 +230,20 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		932211132007BE86004184FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932210E22007BE85004184FD /* RCTOneSignal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3245CDED1BFEE35C00EABF68;
+			remoteInfo = RCTOneSignal;
+		};
+		932211782007BEA1004184FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932211472007BEA0004184FD /* RCTOneSignal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3245CDED1BFEE35C00EABF68;
+			remoteInfo = RCTOneSignal;
+		};
 		932CBE182003C48700CB38A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -252,9 +265,30 @@
 			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
 			remoteInfo = "fishhook-tvOS";
 		};
-		932CBE312003C48800CB38A7 /* PBXContainerItemProxy */ = {
+		93656F652007C6E4008336A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2B33EEF4812345398C390D33 /* RCTOneSignal.xcodeproj */;
+			containerPortal = 93656F5F2007C6E4008336A4 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05B16839E481DC20E3AFF4E5F77E2A7F;
+			remoteInfo = "Pods-arnold_app_v2";
+		};
+		93656F672007C6E4008336A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93656F5F2007C6E4008336A4 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1DDA3DAB1F63CE4B49876B4E8A26716;
+			remoteInfo = "Pods-arnold_app_v2-tvOSTests";
+		};
+		93656F692007C6E4008336A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93656F5F2007C6E4008336A4 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 15FF26E702DFBBE5EFCC56B9CA8DC004;
+			remoteInfo = "Pods-arnold_app_v2Tests";
+		};
+		93C0F61E2005677E00506870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93C0F61A2005677E00506870 /* RCTOneSignal.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3245CDED1BFEE35C00EABF68;
 			remoteInfo = RCTOneSignal;
@@ -320,7 +354,6 @@
 		00E356EE1AD99517003FC87E /* arnold_app_v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = arnold_app_v2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* arnold_app_v2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arnold_app_v2Tests.m; sourceTree = "<group>"; };
-		134CCE805684A88C5398ADFC /* Pods-arnold_app_v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arnold_app_v2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-arnold_app_v2/Pods-arnold_app_v2.debug.xcconfig"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* arnold_app_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arnold_app_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,15 +365,154 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = arnold_app_v2/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		17772CB2D60A4E1BB90FBF92 /* libRCTOneSignal.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOneSignal.a; sourceTree = "<group>"; };
-		1BB3AEF55FD5CCF9BDB14BE9 /* Pods-arnold_app_v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arnold_app_v2.release.xcconfig"; path = "Pods/Target Support Files/Pods-arnold_app_v2/Pods-arnold_app_v2.release.xcconfig"; sourceTree = "<group>"; };
-		2B33EEF4812345398C390D33 /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOneSignal.xcodeproj; path = "../node_modules/react-native-onesignal/ios/RCTOneSignal.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* arnold_app_v2-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arnold_app_v2-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* arnold_app_v2-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "arnold_app_v2-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		70529F6174C2E0D754F73FA9 /* libPods-arnold_app_v2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-arnold_app_v2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		932210B12007BE85004184FD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		932210B22007BE85004184FD /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		932210B62007BE85004184FD /* NSString+OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+OneSignal.m"; sourceTree = "<group>"; };
+		932210B72007BE85004184FD /* OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignal.h; sourceTree = "<group>"; };
+		932210B82007BE85004184FD /* OneSignalReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalReachability.m; sourceTree = "<group>"; };
+		932210B92007BE85004184FD /* OneSignalTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalTracker.h; sourceTree = "<group>"; };
+		932210BA2007BE85004184FD /* OneSignalNotificationSettingsIOS10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettingsIOS10.h; sourceTree = "<group>"; };
+		932210BB2007BE85004184FD /* OneSignalSelectorHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalSelectorHelpers.m; sourceTree = "<group>"; };
+		932210BC2007BE85004184FD /* OSSubscription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSubscription.m; sourceTree = "<group>"; };
+		932210BD2007BE85004184FD /* UIApplicationDelegate+OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplicationDelegate+OneSignal.h"; sourceTree = "<group>"; };
+		932210BE2007BE85004184FD /* OneSignalNotificationSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettings.h; sourceTree = "<group>"; };
+		932210BF2007BE85004184FD /* OneSignalAlertViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalAlertViewDelegate.m; sourceTree = "<group>"; };
+		932210C02007BE85004184FD /* OneSignalNotificationSettingsIOS8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettingsIOS8.h; sourceTree = "<group>"; };
+		932210C12007BE85004184FD /* OneSignalLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalLocation.m; sourceTree = "<group>"; };
+		932210C22007BE85004184FD /* OneSignalJailbreakDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalJailbreakDetection.h; sourceTree = "<group>"; };
+		932210C32007BE85004184FD /* OneSignalHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalHTTPClient.m; sourceTree = "<group>"; };
+		932210C42007BE85004184FD /* UNUserNotificationCenter+OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UNUserNotificationCenter+OneSignal.m"; sourceTree = "<group>"; };
+		932210C52007BE85004184FD /* OneSignalTrackIAP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalTrackIAP.h; sourceTree = "<group>"; };
+		932210C62007BE85004184FD /* OSPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSPermission.m; sourceTree = "<group>"; };
+		932210C72007BE85004184FD /* OneSignalHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalHelper.h; sourceTree = "<group>"; };
+		932210C82007BE85004184FD /* OneSignalMobileProvision.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalMobileProvision.m; sourceTree = "<group>"; };
+		932210C92007BE85004184FD /* OneSignalWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalWebView.h; sourceTree = "<group>"; };
+		932210CA2007BE85004184FD /* OSObservable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSObservable.h; sourceTree = "<group>"; };
+		932210CB2007BE85004184FD /* OneSignalNotificationSettingsIOS7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalNotificationSettingsIOS7.m; sourceTree = "<group>"; };
+		932210CC2007BE85004184FD /* OneSignalInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalInternal.h; sourceTree = "<group>"; };
+		932210CD2007BE85004184FD /* OneSignalReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalReachability.h; sourceTree = "<group>"; };
+		932210CE2007BE85004184FD /* OneSignalTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalTracker.m; sourceTree = "<group>"; };
+		932210CF2007BE85004184FD /* OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignal.m; sourceTree = "<group>"; };
+		932210D02007BE85004184FD /* NSString+OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+OneSignal.h"; sourceTree = "<group>"; };
+		932210D12007BE85004184FD /* OneSignalLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalLocation.h; sourceTree = "<group>"; };
+		932210D22007BE85004184FD /* OneSignalAlertViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalAlertViewDelegate.h; sourceTree = "<group>"; };
+		932210D32007BE85004184FD /* OneSignalNotificationSettingsIOS8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalNotificationSettingsIOS8.m; sourceTree = "<group>"; };
+		932210D42007BE85004184FD /* OSSubscription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSubscription.h; sourceTree = "<group>"; };
+		932210D52007BE85004184FD /* UIApplicationDelegate+OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplicationDelegate+OneSignal.m"; sourceTree = "<group>"; };
+		932210D62007BE85004184FD /* OneSignalSelectorHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalSelectorHelpers.h; sourceTree = "<group>"; };
+		932210D72007BE85004184FD /* OneSignalNotificationSettingsIOS10.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalNotificationSettingsIOS10.m; sourceTree = "<group>"; };
+		932210D82007BE85004184FD /* OSPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSPermission.h; sourceTree = "<group>"; };
+		932210D92007BE85004184FD /* OneSignalTrackIAP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalTrackIAP.m; sourceTree = "<group>"; };
+		932210DA2007BE85004184FD /* UNUserNotificationCenter+OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UNUserNotificationCenter+OneSignal.h"; sourceTree = "<group>"; };
+		932210DB2007BE85004184FD /* OneSignalHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalHTTPClient.h; sourceTree = "<group>"; };
+		932210DC2007BE85004184FD /* OneSignalJailbreakDetection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalJailbreakDetection.m; sourceTree = "<group>"; };
+		932210DD2007BE85004184FD /* OneSignalNotificationSettingsIOS7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettingsIOS7.h; sourceTree = "<group>"; };
+		932210DE2007BE85004184FD /* OSObservable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSObservable.m; sourceTree = "<group>"; };
+		932210DF2007BE85004184FD /* OneSignalWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalWebView.m; sourceTree = "<group>"; };
+		932210E02007BE85004184FD /* OneSignalMobileProvision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalMobileProvision.h; sourceTree = "<group>"; };
+		932210E12007BE85004184FD /* OneSignalHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalHelper.m; sourceTree = "<group>"; };
+		932210E22007BE85004184FD /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RCTOneSignal.xcodeproj; sourceTree = "<group>"; };
+		932210E62007BE85004184FD /* RCTOneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTOneSignal.m; sourceTree = "<group>"; };
+		932210E72007BE85004184FD /* RCTOneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTOneSignal.h; sourceTree = "<group>"; };
+		932210E82007BE85004184FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		932210E92007BE85004184FD /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		932210EA2007BE85004184FD /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
+		932210EC2007BE85004184FD /* proguard-rules.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proguard-rules.pro"; sourceTree = "<group>"; };
+		932210EF2007BE85004184FD /* gradle-wrapper.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "gradle-wrapper.jar"; sourceTree = "<group>"; };
+		932210F02007BE85004184FD /* gradle-wrapper.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gradle-wrapper.properties"; sourceTree = "<group>"; };
+		932210F12007BE85004184FD /* gradlew */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradlew; sourceTree = "<group>"; };
+		932210F22007BE85004184FD /* build.gradle */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.gradle; sourceTree = "<group>"; };
+		932210F32007BE85004184FD /* gradlew.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradlew.bat; sourceTree = "<group>"; };
+		932210FA2007BE85004184FD /* ApplicationTest.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ApplicationTest.java; sourceTree = "<group>"; };
+		932211002007BE85004184FD /* ExampleUnitTest.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ExampleUnitTest.java; sourceTree = "<group>"; };
+		932211042007BE85004184FD /* strings.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
+		932211052007BE85004184FD /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		9322110A2007BE85004184FD /* RNOneSignal.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RNOneSignal.java; sourceTree = "<group>"; };
+		9322110B2007BE85004184FD /* NotificationNotDisplayingExtender.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = NotificationNotDisplayingExtender.java; sourceTree = "<group>"; };
+		9322110C2007BE85004184FD /* NotificationOpenedHandler.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = NotificationOpenedHandler.java; sourceTree = "<group>"; };
+		9322110D2007BE85004184FD /* RNUtils.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RNUtils.java; sourceTree = "<group>"; };
+		9322110E2007BE85004184FD /* ReactNativeOneSignalPackage.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ReactNativeOneSignalPackage.java; sourceTree = "<group>"; };
+		9322110F2007BE85004184FD /* NotificationReceivedHandler.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = NotificationReceivedHandler.java; sourceTree = "<group>"; };
+		932211102007BE85004184FD /* react-native-onesignal.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "react-native-onesignal.podspec"; sourceTree = "<group>"; };
+		932211112007BE85004184FD /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		932211162007BEA0004184FD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		932211172007BEA0004184FD /* index.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		9322111B2007BEA0004184FD /* NSString+OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+OneSignal.m"; sourceTree = "<group>"; };
+		9322111C2007BEA0004184FD /* OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignal.h; sourceTree = "<group>"; };
+		9322111D2007BEA0004184FD /* OneSignalReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalReachability.m; sourceTree = "<group>"; };
+		9322111E2007BEA0004184FD /* OneSignalTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalTracker.h; sourceTree = "<group>"; };
+		9322111F2007BEA0004184FD /* OneSignalNotificationSettingsIOS10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettingsIOS10.h; sourceTree = "<group>"; };
+		932211202007BEA0004184FD /* OneSignalSelectorHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalSelectorHelpers.m; sourceTree = "<group>"; };
+		932211212007BEA0004184FD /* OSSubscription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSSubscription.m; sourceTree = "<group>"; };
+		932211222007BEA0004184FD /* UIApplicationDelegate+OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplicationDelegate+OneSignal.h"; sourceTree = "<group>"; };
+		932211232007BEA0004184FD /* OneSignalNotificationSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettings.h; sourceTree = "<group>"; };
+		932211242007BEA0004184FD /* OneSignalAlertViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalAlertViewDelegate.m; sourceTree = "<group>"; };
+		932211252007BEA0004184FD /* OneSignalNotificationSettingsIOS8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettingsIOS8.h; sourceTree = "<group>"; };
+		932211262007BEA0004184FD /* OneSignalLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalLocation.m; sourceTree = "<group>"; };
+		932211272007BEA0004184FD /* OneSignalJailbreakDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalJailbreakDetection.h; sourceTree = "<group>"; };
+		932211282007BEA0004184FD /* OneSignalHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalHTTPClient.m; sourceTree = "<group>"; };
+		932211292007BEA0004184FD /* UNUserNotificationCenter+OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UNUserNotificationCenter+OneSignal.m"; sourceTree = "<group>"; };
+		9322112A2007BEA0004184FD /* OneSignalTrackIAP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalTrackIAP.h; sourceTree = "<group>"; };
+		9322112B2007BEA0004184FD /* OSPermission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSPermission.m; sourceTree = "<group>"; };
+		9322112C2007BEA0004184FD /* OneSignalHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalHelper.h; sourceTree = "<group>"; };
+		9322112D2007BEA0004184FD /* OneSignalMobileProvision.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalMobileProvision.m; sourceTree = "<group>"; };
+		9322112E2007BEA0004184FD /* OneSignalWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalWebView.h; sourceTree = "<group>"; };
+		9322112F2007BEA0004184FD /* OSObservable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSObservable.h; sourceTree = "<group>"; };
+		932211302007BEA0004184FD /* OneSignalNotificationSettingsIOS7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalNotificationSettingsIOS7.m; sourceTree = "<group>"; };
+		932211312007BEA0004184FD /* OneSignalInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalInternal.h; sourceTree = "<group>"; };
+		932211322007BEA0004184FD /* OneSignalReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalReachability.h; sourceTree = "<group>"; };
+		932211332007BEA0004184FD /* OneSignalTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalTracker.m; sourceTree = "<group>"; };
+		932211342007BEA0004184FD /* OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignal.m; sourceTree = "<group>"; };
+		932211352007BEA0004184FD /* NSString+OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+OneSignal.h"; sourceTree = "<group>"; };
+		932211362007BEA0004184FD /* OneSignalLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalLocation.h; sourceTree = "<group>"; };
+		932211372007BEA0004184FD /* OneSignalAlertViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalAlertViewDelegate.h; sourceTree = "<group>"; };
+		932211382007BEA0004184FD /* OneSignalNotificationSettingsIOS8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalNotificationSettingsIOS8.m; sourceTree = "<group>"; };
+		932211392007BEA0004184FD /* OSSubscription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSSubscription.h; sourceTree = "<group>"; };
+		9322113A2007BEA0004184FD /* UIApplicationDelegate+OneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplicationDelegate+OneSignal.m"; sourceTree = "<group>"; };
+		9322113B2007BEA0004184FD /* OneSignalSelectorHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalSelectorHelpers.h; sourceTree = "<group>"; };
+		9322113C2007BEA0004184FD /* OneSignalNotificationSettingsIOS10.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalNotificationSettingsIOS10.m; sourceTree = "<group>"; };
+		9322113D2007BEA0004184FD /* OSPermission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSPermission.h; sourceTree = "<group>"; };
+		9322113E2007BEA0004184FD /* OneSignalTrackIAP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalTrackIAP.m; sourceTree = "<group>"; };
+		9322113F2007BEA0004184FD /* UNUserNotificationCenter+OneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UNUserNotificationCenter+OneSignal.h"; sourceTree = "<group>"; };
+		932211402007BEA0004184FD /* OneSignalHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalHTTPClient.h; sourceTree = "<group>"; };
+		932211412007BEA0004184FD /* OneSignalJailbreakDetection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalJailbreakDetection.m; sourceTree = "<group>"; };
+		932211422007BEA0004184FD /* OneSignalNotificationSettingsIOS7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalNotificationSettingsIOS7.h; sourceTree = "<group>"; };
+		932211432007BEA0004184FD /* OSObservable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSObservable.m; sourceTree = "<group>"; };
+		932211442007BEA0004184FD /* OneSignalWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalWebView.m; sourceTree = "<group>"; };
+		932211452007BEA0004184FD /* OneSignalMobileProvision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSignalMobileProvision.h; sourceTree = "<group>"; };
+		932211462007BEA0004184FD /* OneSignalHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneSignalHelper.m; sourceTree = "<group>"; };
+		932211472007BEA0004184FD /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RCTOneSignal.xcodeproj; sourceTree = "<group>"; };
+		9322114B2007BEA0004184FD /* RCTOneSignal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTOneSignal.m; sourceTree = "<group>"; };
+		9322114C2007BEA0004184FD /* RCTOneSignal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTOneSignal.h; sourceTree = "<group>"; };
+		9322114D2007BEA0004184FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9322114E2007BEA0004184FD /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		9322114F2007BEA0004184FD /* circle.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
+		932211512007BEA0004184FD /* proguard-rules.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proguard-rules.pro"; sourceTree = "<group>"; };
+		932211542007BEA0004184FD /* gradle-wrapper.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "gradle-wrapper.jar"; sourceTree = "<group>"; };
+		932211552007BEA0004184FD /* gradle-wrapper.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gradle-wrapper.properties"; sourceTree = "<group>"; };
+		932211562007BEA0004184FD /* gradlew */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradlew; sourceTree = "<group>"; };
+		932211572007BEA0004184FD /* build.gradle */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.gradle; sourceTree = "<group>"; };
+		932211582007BEA0004184FD /* gradlew.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradlew.bat; sourceTree = "<group>"; };
+		9322115F2007BEA0004184FD /* ApplicationTest.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ApplicationTest.java; sourceTree = "<group>"; };
+		932211652007BEA0004184FD /* ExampleUnitTest.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ExampleUnitTest.java; sourceTree = "<group>"; };
+		932211692007BEA0004184FD /* strings.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = strings.xml; sourceTree = "<group>"; };
+		9322116A2007BEA0004184FD /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		9322116F2007BEA0004184FD /* RNOneSignal.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RNOneSignal.java; sourceTree = "<group>"; };
+		932211702007BEA0004184FD /* NotificationNotDisplayingExtender.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = NotificationNotDisplayingExtender.java; sourceTree = "<group>"; };
+		932211712007BEA0004184FD /* NotificationOpenedHandler.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = NotificationOpenedHandler.java; sourceTree = "<group>"; };
+		932211722007BEA0004184FD /* RNUtils.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = RNUtils.java; sourceTree = "<group>"; };
+		932211732007BEA1004184FD /* ReactNativeOneSignalPackage.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = ReactNativeOneSignalPackage.java; sourceTree = "<group>"; };
+		932211742007BEA1004184FD /* NotificationReceivedHandler.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = NotificationReceivedHandler.java; sourceTree = "<group>"; };
+		932211752007BEA1004184FD /* react-native-onesignal.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "react-native-onesignal.podspec"; sourceTree = "<group>"; };
+		932211762007BEA1004184FD /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		93656F5F2007C6E4008336A4 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		939BA4902005201300038C5D /* arnold_app_v2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = arnold_app_v2.entitlements; path = arnold_app_v2/arnold_app_v2.entitlements; sourceTree = "<group>"; };
+		93C0F61A2005677E00506870 /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTOneSignal.xcodeproj; path = "../node_modules/react-native-onesignal/ios/RCTOneSignal.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -357,6 +529,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9322108C2005690C004184FD /* libRCTOneSignal.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				937C21532005286E00F5D2DF /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -369,8 +542,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				2A29A2DAD56B4616A87CACB9 /* libRCTOneSignal.a in Frameworks */,
-				4F3304845B7FAE4A12BBE73A /* libPods-arnold_app_v2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +706,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				93C0F61A2005677E00506870 /* RCTOneSignal.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -547,7 +719,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				2B33EEF4812345398C390D33 /* RCTOneSignal.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -569,7 +740,6 @@
 				00E356EF1AD99517003FC87E /* arnold_app_v2Tests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				932CBE122003C48300CB38A7 /* Recovered References */,
-				84875F4FE8D9010D9DC3B3AB /* Pods */,
 				BA5B198FAF005F3B253AF823 /* Frameworks */,
 			);
 			indentWidth = 2;
@@ -588,13 +758,576 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84875F4FE8D9010D9DC3B3AB /* Pods */ = {
+		932210B02007BE85004184FD /* react-native-onesignal */ = {
 			isa = PBXGroup;
 			children = (
-				134CCE805684A88C5398ADFC /* Pods-arnold_app_v2.debug.xcconfig */,
-				1BB3AEF55FD5CCF9BDB14BE9 /* Pods-arnold_app_v2.release.xcconfig */,
+				932210B12007BE85004184FD /* LICENSE */,
+				932210B22007BE85004184FD /* index.js */,
+				932210B32007BE85004184FD /* ios */,
+				932210E82007BE85004184FD /* README.md */,
+				932210E92007BE85004184FD /* package.json */,
+				932210EA2007BE85004184FD /* circle.yml */,
+				932210EB2007BE85004184FD /* android */,
+				932211102007BE85004184FD /* react-native-onesignal.podspec */,
+				932211112007BE85004184FD /* .travis.yml */,
 			);
-			name = Pods;
+			name = "react-native-onesignal";
+			path = "../node_modules/react-native-onesignal";
+			sourceTree = "<group>";
+		};
+		932210B32007BE85004184FD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				932210B42007BE85004184FD /* OneSignalNativeSDK */,
+				932210E22007BE85004184FD /* RCTOneSignal.xcodeproj */,
+				932210E52007BE85004184FD /* RCTOneSignal */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		932210B42007BE85004184FD /* OneSignalNativeSDK */ = {
+			isa = PBXGroup;
+			children = (
+				932210B52007BE85004184FD /* OneSignal */,
+			);
+			path = OneSignalNativeSDK;
+			sourceTree = "<group>";
+		};
+		932210B52007BE85004184FD /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				932210B62007BE85004184FD /* NSString+OneSignal.m */,
+				932210B72007BE85004184FD /* OneSignal.h */,
+				932210B82007BE85004184FD /* OneSignalReachability.m */,
+				932210B92007BE85004184FD /* OneSignalTracker.h */,
+				932210BA2007BE85004184FD /* OneSignalNotificationSettingsIOS10.h */,
+				932210BB2007BE85004184FD /* OneSignalSelectorHelpers.m */,
+				932210BC2007BE85004184FD /* OSSubscription.m */,
+				932210BD2007BE85004184FD /* UIApplicationDelegate+OneSignal.h */,
+				932210BE2007BE85004184FD /* OneSignalNotificationSettings.h */,
+				932210BF2007BE85004184FD /* OneSignalAlertViewDelegate.m */,
+				932210C02007BE85004184FD /* OneSignalNotificationSettingsIOS8.h */,
+				932210C12007BE85004184FD /* OneSignalLocation.m */,
+				932210C22007BE85004184FD /* OneSignalJailbreakDetection.h */,
+				932210C32007BE85004184FD /* OneSignalHTTPClient.m */,
+				932210C42007BE85004184FD /* UNUserNotificationCenter+OneSignal.m */,
+				932210C52007BE85004184FD /* OneSignalTrackIAP.h */,
+				932210C62007BE85004184FD /* OSPermission.m */,
+				932210C72007BE85004184FD /* OneSignalHelper.h */,
+				932210C82007BE85004184FD /* OneSignalMobileProvision.m */,
+				932210C92007BE85004184FD /* OneSignalWebView.h */,
+				932210CA2007BE85004184FD /* OSObservable.h */,
+				932210CB2007BE85004184FD /* OneSignalNotificationSettingsIOS7.m */,
+				932210CC2007BE85004184FD /* OneSignalInternal.h */,
+				932210CD2007BE85004184FD /* OneSignalReachability.h */,
+				932210CE2007BE85004184FD /* OneSignalTracker.m */,
+				932210CF2007BE85004184FD /* OneSignal.m */,
+				932210D02007BE85004184FD /* NSString+OneSignal.h */,
+				932210D12007BE85004184FD /* OneSignalLocation.h */,
+				932210D22007BE85004184FD /* OneSignalAlertViewDelegate.h */,
+				932210D32007BE85004184FD /* OneSignalNotificationSettingsIOS8.m */,
+				932210D42007BE85004184FD /* OSSubscription.h */,
+				932210D52007BE85004184FD /* UIApplicationDelegate+OneSignal.m */,
+				932210D62007BE85004184FD /* OneSignalSelectorHelpers.h */,
+				932210D72007BE85004184FD /* OneSignalNotificationSettingsIOS10.m */,
+				932210D82007BE85004184FD /* OSPermission.h */,
+				932210D92007BE85004184FD /* OneSignalTrackIAP.m */,
+				932210DA2007BE85004184FD /* UNUserNotificationCenter+OneSignal.h */,
+				932210DB2007BE85004184FD /* OneSignalHTTPClient.h */,
+				932210DC2007BE85004184FD /* OneSignalJailbreakDetection.m */,
+				932210DD2007BE85004184FD /* OneSignalNotificationSettingsIOS7.h */,
+				932210DE2007BE85004184FD /* OSObservable.m */,
+				932210DF2007BE85004184FD /* OneSignalWebView.m */,
+				932210E02007BE85004184FD /* OneSignalMobileProvision.h */,
+				932210E12007BE85004184FD /* OneSignalHelper.m */,
+			);
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
+		932210E32007BE85004184FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				932211142007BE86004184FD /* libRCTOneSignal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		932210E52007BE85004184FD /* RCTOneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				932210E62007BE85004184FD /* RCTOneSignal.m */,
+				932210E72007BE85004184FD /* RCTOneSignal.h */,
+			);
+			path = RCTOneSignal;
+			sourceTree = "<group>";
+		};
+		932210EB2007BE85004184FD /* android */ = {
+			isa = PBXGroup;
+			children = (
+				932210EC2007BE85004184FD /* proguard-rules.pro */,
+				932210ED2007BE85004184FD /* gradle */,
+				932210F12007BE85004184FD /* gradlew */,
+				932210F22007BE85004184FD /* build.gradle */,
+				932210F32007BE85004184FD /* gradlew.bat */,
+				932210F42007BE85004184FD /* src */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		932210ED2007BE85004184FD /* gradle */ = {
+			isa = PBXGroup;
+			children = (
+				932210EE2007BE85004184FD /* wrapper */,
+			);
+			path = gradle;
+			sourceTree = "<group>";
+		};
+		932210EE2007BE85004184FD /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				932210EF2007BE85004184FD /* gradle-wrapper.jar */,
+				932210F02007BE85004184FD /* gradle-wrapper.properties */,
+			);
+			path = wrapper;
+			sourceTree = "<group>";
+		};
+		932210F42007BE85004184FD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				932210F52007BE85004184FD /* androidTest */,
+				932210FB2007BE85004184FD /* test */,
+				932211012007BE85004184FD /* main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		932210F52007BE85004184FD /* androidTest */ = {
+			isa = PBXGroup;
+			children = (
+				932210F62007BE85004184FD /* java */,
+			);
+			path = androidTest;
+			sourceTree = "<group>";
+		};
+		932210F62007BE85004184FD /* java */ = {
+			isa = PBXGroup;
+			children = (
+				932210F72007BE85004184FD /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		932210F72007BE85004184FD /* com */ = {
+			isa = PBXGroup;
+			children = (
+				932210F82007BE85004184FD /* geektime */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		932210F82007BE85004184FD /* geektime */ = {
+			isa = PBXGroup;
+			children = (
+				932210F92007BE85004184FD /* rnonesignalandroid */,
+			);
+			path = geektime;
+			sourceTree = "<group>";
+		};
+		932210F92007BE85004184FD /* rnonesignalandroid */ = {
+			isa = PBXGroup;
+			children = (
+				932210FA2007BE85004184FD /* ApplicationTest.java */,
+			);
+			path = rnonesignalandroid;
+			sourceTree = "<group>";
+		};
+		932210FB2007BE85004184FD /* test */ = {
+			isa = PBXGroup;
+			children = (
+				932210FC2007BE85004184FD /* java */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		932210FC2007BE85004184FD /* java */ = {
+			isa = PBXGroup;
+			children = (
+				932210FD2007BE85004184FD /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		932210FD2007BE85004184FD /* com */ = {
+			isa = PBXGroup;
+			children = (
+				932210FE2007BE85004184FD /* geektime */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		932210FE2007BE85004184FD /* geektime */ = {
+			isa = PBXGroup;
+			children = (
+				932210FF2007BE85004184FD /* rnonesignalandroid */,
+			);
+			path = geektime;
+			sourceTree = "<group>";
+		};
+		932210FF2007BE85004184FD /* rnonesignalandroid */ = {
+			isa = PBXGroup;
+			children = (
+				932211002007BE85004184FD /* ExampleUnitTest.java */,
+			);
+			path = rnonesignalandroid;
+			sourceTree = "<group>";
+		};
+		932211012007BE85004184FD /* main */ = {
+			isa = PBXGroup;
+			children = (
+				932211022007BE85004184FD /* res */,
+				932211052007BE85004184FD /* AndroidManifest.xml */,
+				932211062007BE85004184FD /* java */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		932211022007BE85004184FD /* res */ = {
+			isa = PBXGroup;
+			children = (
+				932211032007BE85004184FD /* values */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		932211032007BE85004184FD /* values */ = {
+			isa = PBXGroup;
+			children = (
+				932211042007BE85004184FD /* strings.xml */,
+			);
+			path = values;
+			sourceTree = "<group>";
+		};
+		932211062007BE85004184FD /* java */ = {
+			isa = PBXGroup;
+			children = (
+				932211072007BE85004184FD /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		932211072007BE85004184FD /* com */ = {
+			isa = PBXGroup;
+			children = (
+				932211082007BE85004184FD /* geektime */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		932211082007BE85004184FD /* geektime */ = {
+			isa = PBXGroup;
+			children = (
+				932211092007BE85004184FD /* rnonesignalandroid */,
+			);
+			path = geektime;
+			sourceTree = "<group>";
+		};
+		932211092007BE85004184FD /* rnonesignalandroid */ = {
+			isa = PBXGroup;
+			children = (
+				9322110A2007BE85004184FD /* RNOneSignal.java */,
+				9322110B2007BE85004184FD /* NotificationNotDisplayingExtender.java */,
+				9322110C2007BE85004184FD /* NotificationOpenedHandler.java */,
+				9322110D2007BE85004184FD /* RNUtils.java */,
+				9322110E2007BE85004184FD /* ReactNativeOneSignalPackage.java */,
+				9322110F2007BE85004184FD /* NotificationReceivedHandler.java */,
+			);
+			path = rnonesignalandroid;
+			sourceTree = "<group>";
+		};
+		932211152007BEA0004184FD /* react-native-onesignal */ = {
+			isa = PBXGroup;
+			children = (
+				932211162007BEA0004184FD /* LICENSE */,
+				932211172007BEA0004184FD /* index.js */,
+				932211182007BEA0004184FD /* ios */,
+				9322114D2007BEA0004184FD /* README.md */,
+				9322114E2007BEA0004184FD /* package.json */,
+				9322114F2007BEA0004184FD /* circle.yml */,
+				932211502007BEA0004184FD /* android */,
+				932211752007BEA1004184FD /* react-native-onesignal.podspec */,
+				932211762007BEA1004184FD /* .travis.yml */,
+			);
+			name = "react-native-onesignal";
+			path = "../node_modules/react-native-onesignal";
+			sourceTree = "<group>";
+		};
+		932211182007BEA0004184FD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				932211192007BEA0004184FD /* OneSignalNativeSDK */,
+				932211472007BEA0004184FD /* RCTOneSignal.xcodeproj */,
+				9322114A2007BEA0004184FD /* RCTOneSignal */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		932211192007BEA0004184FD /* OneSignalNativeSDK */ = {
+			isa = PBXGroup;
+			children = (
+				9322111A2007BEA0004184FD /* OneSignal */,
+			);
+			path = OneSignalNativeSDK;
+			sourceTree = "<group>";
+		};
+		9322111A2007BEA0004184FD /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				9322111B2007BEA0004184FD /* NSString+OneSignal.m */,
+				9322111C2007BEA0004184FD /* OneSignal.h */,
+				9322111D2007BEA0004184FD /* OneSignalReachability.m */,
+				9322111E2007BEA0004184FD /* OneSignalTracker.h */,
+				9322111F2007BEA0004184FD /* OneSignalNotificationSettingsIOS10.h */,
+				932211202007BEA0004184FD /* OneSignalSelectorHelpers.m */,
+				932211212007BEA0004184FD /* OSSubscription.m */,
+				932211222007BEA0004184FD /* UIApplicationDelegate+OneSignal.h */,
+				932211232007BEA0004184FD /* OneSignalNotificationSettings.h */,
+				932211242007BEA0004184FD /* OneSignalAlertViewDelegate.m */,
+				932211252007BEA0004184FD /* OneSignalNotificationSettingsIOS8.h */,
+				932211262007BEA0004184FD /* OneSignalLocation.m */,
+				932211272007BEA0004184FD /* OneSignalJailbreakDetection.h */,
+				932211282007BEA0004184FD /* OneSignalHTTPClient.m */,
+				932211292007BEA0004184FD /* UNUserNotificationCenter+OneSignal.m */,
+				9322112A2007BEA0004184FD /* OneSignalTrackIAP.h */,
+				9322112B2007BEA0004184FD /* OSPermission.m */,
+				9322112C2007BEA0004184FD /* OneSignalHelper.h */,
+				9322112D2007BEA0004184FD /* OneSignalMobileProvision.m */,
+				9322112E2007BEA0004184FD /* OneSignalWebView.h */,
+				9322112F2007BEA0004184FD /* OSObservable.h */,
+				932211302007BEA0004184FD /* OneSignalNotificationSettingsIOS7.m */,
+				932211312007BEA0004184FD /* OneSignalInternal.h */,
+				932211322007BEA0004184FD /* OneSignalReachability.h */,
+				932211332007BEA0004184FD /* OneSignalTracker.m */,
+				932211342007BEA0004184FD /* OneSignal.m */,
+				932211352007BEA0004184FD /* NSString+OneSignal.h */,
+				932211362007BEA0004184FD /* OneSignalLocation.h */,
+				932211372007BEA0004184FD /* OneSignalAlertViewDelegate.h */,
+				932211382007BEA0004184FD /* OneSignalNotificationSettingsIOS8.m */,
+				932211392007BEA0004184FD /* OSSubscription.h */,
+				9322113A2007BEA0004184FD /* UIApplicationDelegate+OneSignal.m */,
+				9322113B2007BEA0004184FD /* OneSignalSelectorHelpers.h */,
+				9322113C2007BEA0004184FD /* OneSignalNotificationSettingsIOS10.m */,
+				9322113D2007BEA0004184FD /* OSPermission.h */,
+				9322113E2007BEA0004184FD /* OneSignalTrackIAP.m */,
+				9322113F2007BEA0004184FD /* UNUserNotificationCenter+OneSignal.h */,
+				932211402007BEA0004184FD /* OneSignalHTTPClient.h */,
+				932211412007BEA0004184FD /* OneSignalJailbreakDetection.m */,
+				932211422007BEA0004184FD /* OneSignalNotificationSettingsIOS7.h */,
+				932211432007BEA0004184FD /* OSObservable.m */,
+				932211442007BEA0004184FD /* OneSignalWebView.m */,
+				932211452007BEA0004184FD /* OneSignalMobileProvision.h */,
+				932211462007BEA0004184FD /* OneSignalHelper.m */,
+			);
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
+		932211482007BEA0004184FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				932211792007BEA1004184FD /* libRCTOneSignal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9322114A2007BEA0004184FD /* RCTOneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				9322114B2007BEA0004184FD /* RCTOneSignal.m */,
+				9322114C2007BEA0004184FD /* RCTOneSignal.h */,
+			);
+			path = RCTOneSignal;
+			sourceTree = "<group>";
+		};
+		932211502007BEA0004184FD /* android */ = {
+			isa = PBXGroup;
+			children = (
+				932211512007BEA0004184FD /* proguard-rules.pro */,
+				932211522007BEA0004184FD /* gradle */,
+				932211562007BEA0004184FD /* gradlew */,
+				932211572007BEA0004184FD /* build.gradle */,
+				932211582007BEA0004184FD /* gradlew.bat */,
+				932211592007BEA0004184FD /* src */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		932211522007BEA0004184FD /* gradle */ = {
+			isa = PBXGroup;
+			children = (
+				932211532007BEA0004184FD /* wrapper */,
+			);
+			path = gradle;
+			sourceTree = "<group>";
+		};
+		932211532007BEA0004184FD /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				932211542007BEA0004184FD /* gradle-wrapper.jar */,
+				932211552007BEA0004184FD /* gradle-wrapper.properties */,
+			);
+			path = wrapper;
+			sourceTree = "<group>";
+		};
+		932211592007BEA0004184FD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9322115A2007BEA0004184FD /* androidTest */,
+				932211602007BEA0004184FD /* test */,
+				932211662007BEA0004184FD /* main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		9322115A2007BEA0004184FD /* androidTest */ = {
+			isa = PBXGroup;
+			children = (
+				9322115B2007BEA0004184FD /* java */,
+			);
+			path = androidTest;
+			sourceTree = "<group>";
+		};
+		9322115B2007BEA0004184FD /* java */ = {
+			isa = PBXGroup;
+			children = (
+				9322115C2007BEA0004184FD /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		9322115C2007BEA0004184FD /* com */ = {
+			isa = PBXGroup;
+			children = (
+				9322115D2007BEA0004184FD /* geektime */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		9322115D2007BEA0004184FD /* geektime */ = {
+			isa = PBXGroup;
+			children = (
+				9322115E2007BEA0004184FD /* rnonesignalandroid */,
+			);
+			path = geektime;
+			sourceTree = "<group>";
+		};
+		9322115E2007BEA0004184FD /* rnonesignalandroid */ = {
+			isa = PBXGroup;
+			children = (
+				9322115F2007BEA0004184FD /* ApplicationTest.java */,
+			);
+			path = rnonesignalandroid;
+			sourceTree = "<group>";
+		};
+		932211602007BEA0004184FD /* test */ = {
+			isa = PBXGroup;
+			children = (
+				932211612007BEA0004184FD /* java */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		932211612007BEA0004184FD /* java */ = {
+			isa = PBXGroup;
+			children = (
+				932211622007BEA0004184FD /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		932211622007BEA0004184FD /* com */ = {
+			isa = PBXGroup;
+			children = (
+				932211632007BEA0004184FD /* geektime */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		932211632007BEA0004184FD /* geektime */ = {
+			isa = PBXGroup;
+			children = (
+				932211642007BEA0004184FD /* rnonesignalandroid */,
+			);
+			path = geektime;
+			sourceTree = "<group>";
+		};
+		932211642007BEA0004184FD /* rnonesignalandroid */ = {
+			isa = PBXGroup;
+			children = (
+				932211652007BEA0004184FD /* ExampleUnitTest.java */,
+			);
+			path = rnonesignalandroid;
+			sourceTree = "<group>";
+		};
+		932211662007BEA0004184FD /* main */ = {
+			isa = PBXGroup;
+			children = (
+				932211672007BEA0004184FD /* res */,
+				9322116A2007BEA0004184FD /* AndroidManifest.xml */,
+				9322116B2007BEA0004184FD /* java */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		932211672007BEA0004184FD /* res */ = {
+			isa = PBXGroup;
+			children = (
+				932211682007BEA0004184FD /* values */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		932211682007BEA0004184FD /* values */ = {
+			isa = PBXGroup;
+			children = (
+				932211692007BEA0004184FD /* strings.xml */,
+			);
+			path = values;
+			sourceTree = "<group>";
+		};
+		9322116B2007BEA0004184FD /* java */ = {
+			isa = PBXGroup;
+			children = (
+				9322116C2007BEA0004184FD /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
+		9322116C2007BEA0004184FD /* com */ = {
+			isa = PBXGroup;
+			children = (
+				9322116D2007BEA0004184FD /* geektime */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		9322116D2007BEA0004184FD /* geektime */ = {
+			isa = PBXGroup;
+			children = (
+				9322116E2007BEA0004184FD /* rnonesignalandroid */,
+			);
+			path = geektime;
+			sourceTree = "<group>";
+		};
+		9322116E2007BEA0004184FD /* rnonesignalandroid */ = {
+			isa = PBXGroup;
+			children = (
+				9322116F2007BEA0004184FD /* RNOneSignal.java */,
+				932211702007BEA0004184FD /* NotificationNotDisplayingExtender.java */,
+				932211712007BEA0004184FD /* NotificationOpenedHandler.java */,
+				932211722007BEA0004184FD /* RNUtils.java */,
+				932211732007BEA1004184FD /* ReactNativeOneSignalPackage.java */,
+				932211742007BEA1004184FD /* NotificationReceivedHandler.java */,
+			);
+			path = rnonesignalandroid;
 			sourceTree = "<group>";
 		};
 		932CBE122003C48300CB38A7 /* Recovered References */ = {
@@ -605,10 +1338,20 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		932CBE2E2003C48700CB38A7 /* Products */ = {
+		93656F602007C6E4008336A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				932CBE322003C48800CB38A7 /* libRCTOneSignal.a */,
+				93656F662007C6E4008336A4 /* libPods-arnold_app_v2.a */,
+				93656F682007C6E4008336A4 /* libPods-arnold_app_v2-tvOSTests.a */,
+				93656F6A2007C6E4008336A4 /* libPods-arnold_app_v2Tests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93C0F61B2005677E00506870 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93C0F61F2005677E00506870 /* libRCTOneSignal.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -625,7 +1368,9 @@
 		BA5B198FAF005F3B253AF823 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				70529F6174C2E0D754F73FA9 /* libPods-arnold_app_v2.a */,
+				93656F5F2007C6E4008336A4 /* Pods.xcodeproj */,
+				932210B02007BE85004184FD /* react-native-onesignal */,
+				932211152007BEA0004184FD /* react-native-onesignal */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -655,13 +1400,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "arnold_app_v2" */;
 			buildPhases = (
-				275348033DCC90EB952C1002 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				9172DEEB219D253F71CB2065 /* [CP] Embed Pods Frameworks */,
-				C0E1B41B4531B09395A7103E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -724,6 +1466,9 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 6S3MFHQ3LQ;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -753,6 +1498,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 93656F602007C6E4008336A4 /* Products */;
+					ProjectRef = 93656F5F2007C6E4008336A4 /* Pods.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
 				},
@@ -781,8 +1530,16 @@
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
 				},
 				{
-					ProductGroup = 932CBE2E2003C48700CB38A7 /* Products */;
-					ProjectRef = 2B33EEF4812345398C390D33 /* RCTOneSignal.xcodeproj */;
+					ProductGroup = 932211482007BEA0004184FD /* Products */;
+					ProjectRef = 932211472007BEA0004184FD /* RCTOneSignal.xcodeproj */;
+				},
+				{
+					ProductGroup = 932210E32007BE85004184FD /* Products */;
+					ProjectRef = 932210E22007BE85004184FD /* RCTOneSignal.xcodeproj */;
+				},
+				{
+					ProductGroup = 93C0F61B2005677E00506870 /* Products */;
+					ProjectRef = 93C0F61A2005677E00506870 /* RCTOneSignal.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -991,6 +1748,20 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		932211142007BE86004184FD /* libRCTOneSignal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTOneSignal.a;
+			remoteRef = 932211132007BE86004184FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		932211792007BEA1004184FD /* libRCTOneSignal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTOneSignal.a;
+			remoteRef = 932211782007BEA1004184FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		932CBE192003C48700CB38A7 /* libRCTBlob-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1012,11 +1783,32 @@
 			remoteRef = 932CBE2C2003C48700CB38A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		932CBE322003C48800CB38A7 /* libRCTOneSignal.a */ = {
+		93656F662007C6E4008336A4 /* libPods-arnold_app_v2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-arnold_app_v2.a";
+			remoteRef = 93656F652007C6E4008336A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		93656F682007C6E4008336A4 /* libPods-arnold_app_v2-tvOSTests.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-arnold_app_v2-tvOSTests.a";
+			remoteRef = 93656F672007C6E4008336A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		93656F6A2007C6E4008336A4 /* libPods-arnold_app_v2Tests.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-arnold_app_v2Tests.a";
+			remoteRef = 93656F692007C6E4008336A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		93C0F61F2005677E00506870 /* libRCTOneSignal.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRCTOneSignal.a;
-			remoteRef = 932CBE312003C48800CB38A7 /* PBXContainerItemProxy */;
+			remoteRef = 93C0F61E2005677E00506870 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		93E64AA9200405050030E199 /* libthird-party.a */ = {
@@ -1119,24 +1911,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		275348033DCC90EB952C1002 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-arnold_app_v2-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1150,36 +1924,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		9172DEEB219D253F71CB2065 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arnold_app_v2/Pods-arnold_app_v2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0E1B41B4531B09395A7103E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-arnold_app_v2/Pods-arnold_app_v2-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1303,7 +2047,6 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 134CCE805684A88C5398ADFC /* Pods-arnold_app_v2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1311,12 +2054,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 6S3MFHQ3LQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/OneSignal/iOS_SDK/Framework\"",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/RCTOneSignal/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = arnold_app_v2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1331,19 +2081,25 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BB3AEF55FD5CCF9BDB14BE9 /* Pods-arnold_app_v2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = arnold_app_v2/arnold_app_v2.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6S3MFHQ3LQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/OneSignal/iOS_SDK/Framework\"",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/RCTOneSignal/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = arnold_app_v2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

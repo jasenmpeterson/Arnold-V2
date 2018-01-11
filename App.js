@@ -12,6 +12,7 @@ import deniedClaims from "./components/sections/deniedClaims/index";
 import damRelease from "./components/sections/damRelease/index";
 import faq from "./components/sections/faq/index";
 import contact from "./components/sections/contact/index";
+import TabsView from "./components/tabsBar";
 
 const reducerCreate = params => {
   const defaultReducer = new Reducer(params);

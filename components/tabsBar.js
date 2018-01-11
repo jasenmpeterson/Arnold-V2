@@ -55,18 +55,48 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderRightWidth: 1,
     borderBottomWidth: 1,
-    borderColor: "#EFEFEF"
+    borderColor: "#EFEFEF",
+    backgroundColor: "#FFFFFF"
+  },
+  tabContainerActive: {
+    alignItems: "stretch",
+    flex: 1,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: "#175492",
+    backgroundColor: "#175492"
   }
 });
 
 class TabView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { pressStatus: false };
+  }
+  _onHideUnderlay() {
+    this.setState({ pressStatus: false });
+  }
+  _onShowUnderlay() {
+    this.setState({ pressStatus: true });
+  }
   render() {
     return (
       <Grid style={[styles.tabsWrap]}>
         <Col>
           <TouchableHighlight
             onPress={Actions.residential}
-            style={styles.tabContainer}
+            onHideUnderlay={() => {
+              this.setState({ pressStatus: false });
+            }}
+            onShowUnderlay={() => {
+              this.setState({ pressStatus: true });
+            }}
+            style={
+              this.state.pressStatus
+                ? styles.tabContainerActive
+                : styles.tabContainer
+            }
           >
             <View style={[styles.tab]}>
               <Image
@@ -79,6 +109,7 @@ class TabView extends React.Component {
         </Col>
         <Col>
           <TouchableHighlight
+            underlayColor={"#175492"}
             onPress={Actions.commercial}
             style={styles.tabContainer}
           >
@@ -93,6 +124,7 @@ class TabView extends React.Component {
         </Col>
         <Col>
           <TouchableHighlight
+            underlayColor={"#175492"}
             onPress={Actions.home}
             style={styles.tabContainer}
           >
@@ -105,7 +137,11 @@ class TabView extends React.Component {
           </TouchableHighlight>
         </Col>
         <Col>
-          <TouchableHighlight onPress={Actions.faq} style={styles.tabContainer}>
+          <TouchableHighlight
+            onPress={Actions.faq}
+            underlayColor={"#175492"}
+            style={styles.tabContainer}
+          >
             <View style={[styles.tab]}>
               <Image
                 style={styles.icon}
@@ -117,6 +153,7 @@ class TabView extends React.Component {
         </Col>
         <Col>
           <TouchableHighlight
+            underlayColor={"#175492"}
             onPress={Actions.contact}
             style={styles.tabContainer}
           >
