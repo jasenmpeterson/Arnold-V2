@@ -74,11 +74,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		6TWai4Uv9lrRTsKbuKKwPRPT3os=
+		vQ7sm9x8pEVkiFNnd/6pHXL84oI=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		yHERbHb5ln6ga/dVgAiPe1dZ/bY=
+		P9mpMPibcJzkF1h0crvyaJrpqLI=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -139,7 +139,7 @@
 		</data>
 		<key>PlugIns/arnold_app_v2Tests.xctest.dSYM/Contents/Resources/DWARF/arnold_app_v2Tests</key>
 		<data>
-		auvEbpvhFfd0or8Ds/c2r4kbczw=
+		oGkMOfNU04QWpstxTEh6DxvoLLk=
 		</data>
 		<key>PlugIns/arnold_app_v2Tests.xctest/Info.plist</key>
 		<data>
@@ -151,7 +151,7 @@
 		</data>
 		<key>PlugIns/arnold_app_v2Tests.xctest/arnold_app_v2Tests</key>
 		<data>
-		X6TlgCEZ7kQlGvcoDR9pWT9xHLo=
+		pcbXapjh2kZmiQ9UScANQu2V6a8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -347,22 +347,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6TWai4Uv9lrRTsKbuKKwPRPT3os=
+			vQ7sm9x8pEVkiFNnd/6pHXL84oI=
 			</data>
 			<key>hash2</key>
 			<data>
-			0PkCbpwfaInkP1Hwn8UZ2sja0un4vOfAEX1TvGe5Lys=
+			labCssbzv7mK+8Fi4oUrLQj6DimBuMMf8oU9TC5rJmo=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yHERbHb5ln6ga/dVgAiPe1dZ/bY=
+			P9mpMPibcJzkF1h0crvyaJrpqLI=
 			</data>
 			<key>hash2</key>
 			<data>
-			/p90iCaLE9l95W6YUcfJGPbI0xLCnt8FeC2FfJgFrIk=
+			/KufxgEHYW8vOo0CZmtXZqOgJ3VTLFZH4OTWlmwzAfk=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -492,11 +492,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			auvEbpvhFfd0or8Ds/c2r4kbczw=
+			oGkMOfNU04QWpstxTEh6DxvoLLk=
 			</data>
 			<key>hash2</key>
 			<data>
-			WONNaSakQZ0BkKc0HqncJGtI4NO7RYDg2veIi8YMIH0=
+			td/n/YLnPdVwLpiQ5FN3QnG5CzvKYQFmeNR3cdI1xyI=
 			</data>
 		</dict>
 		<key>PlugIns/arnold_app_v2Tests.xctest/Info.plist</key>
@@ -525,11 +525,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			X6TlgCEZ7kQlGvcoDR9pWT9xHLo=
+			pcbXapjh2kZmiQ9UScANQu2V6a8=
 			</data>
 			<key>hash2</key>
 			<data>
-			vnI1eCmOmyyfaZqAFZLqTi6IRBwLv1GcX3vS1Ydfbyw=
+			CgX30se8H6UlgIV8EO1MAtGoZtGWD8Ds1Di6X9wpcWI=
 			</data>
 		</dict>
 	</dict>

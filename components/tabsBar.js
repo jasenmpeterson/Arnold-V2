@@ -23,17 +23,13 @@ const propTypes = {
 };
 
 const styles = StyleSheet.create({
-  tabsWrap: {
-    height: 100
-  },
   tab: {
     paddingTop: 25,
     paddingBottom: 25,
     paddingLeft: 5,
     paddingRight: 5,
     justifyContent: "center",
-    alignItems: "center",
-    flex: 1
+    alignItems: "center"
   },
   tabText: {
     color: "#BFBFBF",
@@ -50,8 +46,6 @@ const styles = StyleSheet.create({
     height: 42.7
   },
   tabContainer: {
-    alignItems: "stretch",
-    flex: 1,
     borderTopWidth: 1,
     borderRightWidth: 1,
     borderBottomWidth: 1,
@@ -59,8 +53,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF"
   },
   tabContainerActive: {
-    alignItems: "stretch",
-    flex: 1,
     borderTopWidth: 1,
     borderRightWidth: 1,
     borderBottomWidth: 1,
@@ -74,6 +66,9 @@ class TabView extends React.Component {
     super(props);
     this.state = { pressStatus: false };
   }
+  static defaultProps = {
+    activePage: false
+  }
   _onHideUnderlay() {
     this.setState({ pressStatus: false });
   }
@@ -82,91 +77,101 @@ class TabView extends React.Component {
   }
   render() {
     return (
-      <Grid style={[styles.tabsWrap]}>
-        <Col>
-          <TouchableHighlight
-            onPress={Actions.residential}
-            onHideUnderlay={() => {
-              this.setState({ pressStatus: false });
-            }}
-            onShowUnderlay={() => {
-              this.setState({ pressStatus: true });
-            }}
-            style={
-              this.state.pressStatus
-                ? styles.tabContainerActive
-                : styles.tabContainer
-            }
-          >
-            <View style={[styles.tab]}>
-              <Image
-                style={[styles.icon]}
-                source={require("../assets/images/umbrella.png")}
-              />
-              <Text style={[styles.tabText]}>HOUSEHOLD</Text>
-            </View>
-          </TouchableHighlight>
-        </Col>
-        <Col>
-          <TouchableHighlight
-            underlayColor={"#175492"}
-            onPress={Actions.commercial}
-            style={styles.tabContainer}
-          >
-            <View style={[styles.tab]}>
-              <Image
-                style={styles.icon}
-                source={require("../assets/images/building.png")}
-              />
-              <Text style={[styles.tabText]}>COMMERCIAL</Text>
-            </View>
-          </TouchableHighlight>
-        </Col>
-        <Col>
-          <TouchableHighlight
-            underlayColor={"#175492"}
-            onPress={Actions.home}
-            style={styles.tabContainer}
-          >
-            <View style={[styles.tab]}>
-              <Image
-                style={[styles.icon, styles.homeIcon]}
-                source={require("../assets/images/logo_icon.png")}
-              />
-            </View>
-          </TouchableHighlight>
-        </Col>
-        <Col>
-          <TouchableHighlight
-            onPress={Actions.faq}
-            underlayColor={"#175492"}
-            style={styles.tabContainer}
-          >
-            <View style={[styles.tab]}>
-              <Image
-                style={styles.icon}
-                source={require("../assets/images/faq.png")}
-              />
-              <Text style={[styles.tabText]}>FAQS</Text>
-            </View>
-          </TouchableHighlight>
-        </Col>
-        <Col>
-          <TouchableHighlight
-            underlayColor={"#175492"}
-            onPress={Actions.contact}
-            style={styles.tabContainer}
-          >
-            <View style={[styles.tab]}>
-              <Image
-                style={styles.icon}
-                source={require("../assets/images/phone.png")}
-              />
-              <Text style={[styles.tabText]}>CONTACT</Text>
-            </View>
-          </TouchableHighlight>
-        </Col>
-      </Grid>
+      <View style={{ height: 100 }}>
+        <Grid>
+          <Col>
+            <TouchableHighlight
+              onPress={Actions.residential}
+              onHideUnderlay={() => {
+                this.setState({ pressStatus: false });
+              }}
+              onShowUnderlay={() => {
+                this.setState({ pressStatus: true });
+              }}
+              style={
+                this.state.pressStatus
+                  ? styles.tabContainerActive
+                  : styles.tabContainer
+              }
+            >
+              <View style={[styles.tab]}>
+                <Image
+                  style={[styles.icon]}
+                  source={require("../assets/images/umbrella.png")}
+                />
+                <Text style={[styles.tabText]}>HOUSEHOLD</Text>
+              </View>
+            </TouchableHighlight>
+          </Col>
+          <Col>
+            <TouchableHighlight
+              underlayColor={"#175492"}
+              onPress={Actions.commercial}
+              style={styles.tabContainer}
+            >
+              <View style={[styles.tab]}>
+                <Image
+                  style={styles.icon}
+                  source={require("../assets/images/building.png")}
+                />
+                <Text style={[styles.tabText]}>COMMERCIAL</Text>
+              </View>
+            </TouchableHighlight>
+          </Col>
+          <Col>
+            <TouchableHighlight
+              underlayColor={"#175492"}
+              onPress={Actions.home}
+              style={styles.tabContainer}
+            >
+              <View style={[styles.tab]}>
+                <Image
+                  style={[styles.icon, styles.homeIcon]}
+                  source={require("../assets/images/logo_icon.png")}
+                />
+              </View>
+            </TouchableHighlight>
+          </Col>
+          <Col>
+            <TouchableHighlight
+              onPress={Actions.faq}
+              underlayColor={"#175492"}
+              style={
+                this.props.activePage
+                  ? styles.tabContainerActive
+                  : styles.tabContainer
+              }
+            >
+              <View style={[styles.tab]}>
+                <Image
+                  style={styles.icon}
+                  source={require("../assets/images/faq.png")}
+                />
+                <Text style={[styles.tabText]}>FAQS</Text>
+              </View>
+            </TouchableHighlight>
+          </Col>
+          <Col>
+            <TouchableHighlight
+              underlayColor={"#175492"}
+              onPress={Actions.contact}
+              style={
+                this.props.activePage
+                  ? styles.tabContainerActive
+                  : styles.tabContainer
+              }
+            >
+              <View style={[styles.tab]}>
+                <Image
+                  style={styles.icon}
+                  source={require("../assets/images/phone.png")}
+                />
+                <Text style={[styles.tabText]}>CONTACT</Text>
+              </View>
+            </TouchableHighlight>
+          </Col>
+        </Grid>
+      </View>
     );
   }
 }

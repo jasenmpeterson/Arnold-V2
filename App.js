@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { StyleSheet, Text, View } from "react-native";
-import { Scene, Router, Reducer } from "react-native-router-flux";
+import { Scene, Router, Reducer, Actions } from "react-native-router-flux";
 import OneSignal from "react-native-onesignal";
 import configureStore from "./store/configureStore";
 import landing from "./components/sections/landing/index";
@@ -23,6 +23,8 @@ const reducerCreate = params => {
 
 const store = configureStore();
 
+const refreshOnBack = () => { Actions.pop(); }
+
 export default class App extends React.Component {
   componentDidMount() {
     OneSignal.configure({});
@@ -31,11 +33,12 @@ export default class App extends React.Component {
     return (
       <Router createReducer={reducerCreate}>
         <Provider store={store}>
-          <View>
+          <Scene>
             <Scene
               key="landing"
               component={landing}
               hideNavBar={true}
+              hideTabBar={true}
               initial
             />
             <Scene key="home" component={home} hideNavBar={true} />
@@ -56,8 +59,8 @@ export default class App extends React.Component {
             />
             <Scene key="damRelease" component={damRelease} hideNavBar={true} />
             <Scene key="faq" component={faq} hideNavBar={true} />
-            <Scene key="contact" component={contact} hideNavBar={true} />
-          </View>
+            <Scene key="contact" component={contact} title="Contact" backTitle="Back" />
+          </Scene>
         </Provider>
       </Router>
     );

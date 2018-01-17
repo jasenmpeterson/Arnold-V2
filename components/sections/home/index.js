@@ -14,24 +14,18 @@ const styles = StyleSheet.create({
   wrap: {
     flex: 1,
     backgroundColor: "white",
-    flexDirection: "column",
-    justifyContent: "flex-end"
   },
   inner: {
     flex: 1,
     justifyContent: "center"
-  },
-  tabsWrap: {
-    height: 100,
-    flexDirection: "column",
-    justifyContent: "flex-end"
   },
   scrollWrap: {
     alignItems: "center",
     justifyContent: "center",
     paddingTop: 70,
     paddingLeft: 5,
-    paddingRight: 5
+    paddingRight: 5,
+    flex: 1
   },
   buttons: {
     justifyContent: "center",

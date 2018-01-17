@@ -17,10 +17,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "flex-end"
   },
-  wrap: {
-    flex: 1,
-    backgroundColor: "white"
-  },
   inner: {
     flex: 1
   },
