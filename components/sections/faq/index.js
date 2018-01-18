@@ -551,7 +551,7 @@ export default class FAQ extends Component {
           </ScrollView>
         </View>
         <View style={[styles.tabsWrap]}>
-          <TabsView />
+          <TabsView activeFAQPage={true} />
         </View>
       </View>
     );

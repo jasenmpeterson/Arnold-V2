@@ -252,7 +252,7 @@ export default class Contact extends Component {
           </ScrollView>
         </View>
         <View style={[styles.tabsWrap]}>
-          <TabsView />
+          <TabsView activeContactPage={true} />
         </View>
       </View>
     );

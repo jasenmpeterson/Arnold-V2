@@ -116,7 +116,7 @@ export default class Home extends Component {
           </ScrollView>
         </View>
         <View style={[styles.tabsWrap]}>
-          <TabsView />
+          <TabsView activeHomeState={true} />
         </View>
       </View>
     );

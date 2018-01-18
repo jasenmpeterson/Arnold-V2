@@ -36,6 +36,11 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(1),
     textAlign: "center"
   },
+  tabTextActive: {
+    color: "#FFFFFF",
+    fontSize: responsiveFontSize(1),
+    textAlign: "center"
+  },
   icon: {
     width: 25,
     height: 25,
@@ -67,7 +72,11 @@ class TabView extends React.Component {
     this.state = { pressStatus: false };
   }
   static defaultProps = {
-    activePage: false
+    activeContactPage: false,
+    activeFAQPage: false,
+    activeHomeState: false,
+    activeCommercialState: false,
+    activeResidentialState: false
   }
   _onHideUnderlay() {
     this.setState({ pressStatus: false });
@@ -89,7 +98,7 @@ class TabView extends React.Component {
                 this.setState({ pressStatus: true });
               }}
               style={
-                this.state.pressStatus
+                this.props.activeResidentialState
                   ? styles.tabContainerActive
                   : styles.tabContainer
               }
@@ -97,9 +106,13 @@ class TabView extends React.Component {
               <View style={[styles.tab]}>
                 <Image
                   style={[styles.icon]}
-                  source={require("../assets/images/umbrella.png")}
+                  source={this.props.activeResidentialState ? require("../assets/images/umbrella_active.png") : require("../assets/images/umbrella.png")}
                 />
-                <Text style={[styles.tabText]}>HOUSEHOLD</Text>
+                <Text style={
+                  this.props.activeResidentialState
+                    ? styles.tabTextActive
+                    : styles.tabText
+                }>HOUSEHOLD</Text>
               </View>
             </TouchableHighlight>
           </Col>
@@ -107,14 +120,22 @@ class TabView extends React.Component {
             <TouchableHighlight
               underlayColor={"#175492"}
               onPress={Actions.commercial}
-              style={styles.tabContainer}
+              style={
+                this.props.activeCommercialState
+                  ? styles.tabContainerActive
+                  : styles.tabContainer
+              }
             >
               <View style={[styles.tab]}>
                 <Image
                   style={styles.icon}
-                  source={require("../assets/images/building.png")}
+                  source={this.props.activeCommercialState ? require("../assets/images/building_active.png") : require("../assets/images/building.png")}
                 />
-                <Text style={[styles.tabText]}>COMMERCIAL</Text>
+                <Text style={
+                  this.props.activeCommercialState
+                    ? styles.tabTextActive
+                    : styles.tabText
+                }>COMMERCIAL</Text>
               </View>
             </TouchableHighlight>
           </Col>
@@ -122,12 +143,16 @@ class TabView extends React.Component {
             <TouchableHighlight
               underlayColor={"#175492"}
               onPress={Actions.home}
-              style={styles.tabContainer}
+              style={
+                this.props.activeHomeState
+                  ? styles.tabContainerActive
+                  : styles.tabContainer
+              }
             >
               <View style={[styles.tab]}>
                 <Image
                   style={[styles.icon, styles.homeIcon]}
-                  source={require("../assets/images/logo_icon.png")}
+                  source={this.props.activeHomeState ? require("../assets/images/logo_icon_active.png") : require("../assets/images/logo_icon.png")}
                 />
               </View>
             </TouchableHighlight>
@@ -137,7 +162,7 @@ class TabView extends React.Component {
               onPress={Actions.faq}
               underlayColor={"#175492"}
               style={
-                this.props.activePage
+                this.props.activeFAQPage
                   ? styles.tabContainerActive
                   : styles.tabContainer
               }
@@ -145,9 +170,13 @@ class TabView extends React.Component {
               <View style={[styles.tab]}>
                 <Image
                   style={styles.icon}
-                  source={require("../assets/images/faq.png")}
+                  source={this.props.activeFAQPage ? require("../assets/images/faq_active.png") : require("../assets/images/faq.png")}
                 />
-                <Text style={[styles.tabText]}>FAQS</Text>
+                <Text style={
+                  this.props.activeFAQPage
+                    ? styles.tabTextActive
+                    : styles.tabText
+                }>FAQS</Text>
               </View>
             </TouchableHighlight>
           </Col>
@@ -156,17 +185,22 @@ class TabView extends React.Component {
               underlayColor={"#175492"}
               onPress={Actions.contact}
               style={
-                this.props.activePage
+                this.props.activeContactPage
                   ? styles.tabContainerActive
                   : styles.tabContainer
               }
             >
               <View style={[styles.tab]}>
+
                 <Image
                   style={styles.icon}
-                  source={require("../assets/images/phone.png")}
+                  source={this.props.activeContactPage ? require("../assets/images/phone_active.png") : require("../assets/images/phone.png")}
                 />
-                <Text style={[styles.tabText]}>CONTACT</Text>
+                <Text style={
+                  this.props.activeContactPage
+                    ? styles.tabTextActive
+                    : styles.tabText
+                }>CONTACT</Text>
               </View>
             </TouchableHighlight>
           </Col>
