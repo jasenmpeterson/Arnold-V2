@@ -31,9 +31,6 @@ const styles = StyleSheet.create({
   },
   scrollWrap: {
     alignItems: "center",
-    paddingTop: 70,
-    paddingLeft: 5,
-    paddingRight: 5
   },
   buttons: {
     justifyContent: "center",
@@ -69,7 +66,7 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   buttonImageTextStyles: {
-    color: "#FFFFFF"
+    color: "#ffffff"
   },
   buttonWrapStyles: {
     alignSelf: "center",
@@ -93,7 +90,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     position: "relative",
-    top: 60
+    top: 40
   },
   pageContent: {
     flexDirection: "column",
@@ -127,9 +124,7 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   headerWrap: {
-    position: "relative",
-    zIndex: 2,
-    top: 50
+    width: "100%"
   },
   headerContent: {
     position: "relative",
@@ -271,37 +266,37 @@ export default class Home extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <View style={[styles.headerWrap]}>
-            <Image
-              style={styles.image}
-              source={require("../../../assets/images/landing_image.png")}
-            />
-            <View style={styles.headerContent}>
-              <HTML
-                html={htmlHeader}
-                classesStyles={contentStyles.classesStyles}
-              />
-            </View>
-            <View style={[styles.boxContainer]}>
-              <Button
-                text={"GET ANSWERS"}
-                action={Actions.contact}
-                buttonStyles={styles.buttonStylesSmall}
-                buttonWrapStyles={styles.buttonSmallWrapStyles}
-                buttonTextStyles={styles.buttonTextStyles}
-                showImage={false}
-              />
-              <Button
-                text={"NEED HELP?"}
-                action={Actions.contact}
-                buttonStyles={styles.buttonStylesSmall}
-                buttonWrapStyles={styles.buttonSmallWrapStyles}
-                buttonTextStyles={styles.buttonTextStyles}
-                showImage={false}
-              />
-            </View>
-          </View>
           <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+            <View style={[styles.headerWrap]}>
+              <Image
+                style={styles.image}
+                source={require("../../../assets/images/landing_image.jpg")}
+              />
+              <View style={styles.headerContent}>
+                <HTML
+                  html={htmlHeader}
+                  classesStyles={contentStyles.classesStyles}
+                />
+              </View>
+              <View style={[styles.boxContainer]}>
+                <Button
+                  text={"GET ANSWERS"}
+                  action={Actions.contact}
+                  buttonStyles={styles.buttonStylesSmall}
+                  buttonWrapStyles={styles.buttonSmallWrapStyles}
+                  buttonTextStyles={styles.buttonTextStyles}
+                  showImage={false}
+                />
+                <Button
+                  text={"NEED HELP?"}
+                  action={Actions.contact}
+                  buttonStyles={styles.buttonStylesSmall}
+                  buttonWrapStyles={styles.buttonSmallWrapStyles}
+                  buttonTextStyles={styles.buttonTextStyles}
+                  showImage={false}
+                />
+              </View>
+            </View>
             <View style={[styles.pageContent]}>
               <HTML
                 html={htmlPageContent}
@@ -348,7 +343,7 @@ export default class Home extends Component {
             </View>
             <View>
               <Image
-                source={require("../../../assets/images/google_map.png")}
+                source={require("../../../assets/images/google_map.jpg")}
               />
             </View>
             <View style={[styles.gmapButton]}>

@@ -228,7 +228,7 @@ export default class Contact extends Component {
           <ScrollView contentContainerStyle={[styles.scrollWrap]}>
             <View style={[styles.image]}>
               <Image
-                source={require("../../../assets/images/gradient_background.png")}
+                source={require("../../../assets/images/gradient_background.jpg")}
               />
             </View>
             <View style={[styles.contentWrap]}>

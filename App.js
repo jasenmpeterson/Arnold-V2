@@ -33,7 +33,7 @@ export default class App extends React.Component {
     return (
       <Router createReducer={reducerCreate}>
         <Provider store={store}>
-          <Scene>
+          <Scene key="container" duration={0}>
             <Scene
               key="landing"
               component={landing}
@@ -45,20 +45,23 @@ export default class App extends React.Component {
             <Scene
               key="residential"
               component={residentialClaims}
-              hideNavBar={true}
+              title="Residential Claims"
+              backTitle="Back"
             />
             <Scene
               key="residentialClaims"
               component={residentialInsuranceClaims}
-              hideNavBar={true}
+              title="Residential Claims Process"
+              backTitle="Back"
             />
             <Scene
               key="deniedClaims"
               component={deniedClaims}
-              hideNavBar={true}
+              title="Denied Claims"
+              backTitle="Back"
             />
-            <Scene key="damRelease" component={damRelease} hideNavBar={true} />
-            <Scene key="faq" component={faq} hideNavBar={true} />
+            <Scene key="damRelease" component={damRelease} title="Dam Release Claims" backTitle="Back" />
+            <Scene key="faq" component={faq} title="FAQS" backTitle="Back" />
             <Scene key="contact" component={contact} title="Contact" backTitle="Back" />
           </Scene>
         </Provider>

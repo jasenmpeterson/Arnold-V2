@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end"
   },
   scrollWrap: {
-    alignItems: "center",
-    paddingTop: 50
+    alignItems: "center"
   },
   buttons: {
     justifyContent: "center",
@@ -134,9 +133,7 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   headerWrap: {
-    position: "relative",
-    zIndex: 2,
-    top: 50,
+    width: "100%",
     height: 150
   },
   headerContent: {
@@ -527,19 +524,19 @@ export default class FAQ extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <View style={[styles.headerWrap]}>
-            <Image
-              style={styles.image}
-              source={require("../../../assets/images/landing_image.png")}
-            />
-            <View style={styles.headerContent}>
-              <HTML
-                html={htmlHeader}
-                classesStyles={contentStyles.classesStyles}
-              />
-            </View>
-          </View>
           <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+            <View style={[styles.headerWrap]}>
+              <Image
+                style={styles.image}
+                source={require("../../../assets/images/landing_image.jpg")}
+              />
+              <View style={styles.headerContent}>
+                <HTML
+                  html={htmlHeader}
+                  classesStyles={contentStyles.classesStyles}
+                />
+              </View>
+            </View>
             <View style={[styles.pageContent]}>
               <Accordion
                 sections={SECTIONS}

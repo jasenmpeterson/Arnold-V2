@@ -117,7 +117,7 @@ export default class Landing extends Component {
           <View style={[styles.image]}>
             <Image
               style={[styles.backgroundImage]}
-              source={require("../../../assets/images/landing_image.png")}
+              source={require("../../../assets/images/landing_image.jpg")}
             />
           </View>
           <View style={[styles.contentWrap]}>
