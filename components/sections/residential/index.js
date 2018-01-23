@@ -13,13 +13,7 @@ import Button from "../../button";
 const styles = StyleSheet.create({
   wrap: {
     flex: 1,
-    backgroundColor: "white",
-    flexDirection: "column",
-    justifyContent: "flex-end"
-  },
-  wrap: {
-    flex: 1,
-    backgroundColor: "white"
+    backgroundColor: "#ffffff"
   },
   inner: {
     flex: 1
@@ -31,6 +25,7 @@ const styles = StyleSheet.create({
   },
   scrollWrap: {
     alignItems: "center",
+    paddingTop: 40
   },
   buttons: {
     justifyContent: "center",
@@ -128,7 +123,7 @@ const styles = StyleSheet.create({
   },
   headerContent: {
     position: "relative",
-    top: 40
+    top: 30
   },
   ctaImage: {
     position: "absolute",

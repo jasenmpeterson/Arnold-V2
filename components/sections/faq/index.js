@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end"
   },
   scrollWrap: {
-    alignItems: "center"
+    alignItems: "center",
+    paddingTop: 40
   },
   buttons: {
     justifyContent: "center",

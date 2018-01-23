@@ -31,9 +31,18 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <Router createReducer={reducerCreate}>
+      <Router
+        createReducer={reducerCreate}
+        sceneStyle={{ top: -20 }}
+        navigationBarStyle={{ top: -20, padding: 0, margin: 0, height: 45, borderBottomWidth: 0 }}
+        titleStyle={{ fontSize: 14 }}
+        backButtonTextStyle={{ fontSize: 14 }}
+        leftButtonIconStyle={{ width: 10, height: 10 }}
+      >
         <Provider store={store}>
-          <Scene key="container" duration={0}>
+          <Scene
+            key="container" duration={0}
+          >
             <Scene
               key="landing"
               component={landing}
@@ -47,6 +56,7 @@ export default class App extends React.Component {
               component={residentialClaims}
               title="Residential Claims"
               backTitle="Back"
+              hideNavBar={true}
             />
             <Scene
               key="residentialClaims"
@@ -61,7 +71,7 @@ export default class App extends React.Component {
               backTitle="Back"
             />
             <Scene key="damRelease" component={damRelease} title="Dam Release Claims" backTitle="Back" />
-            <Scene key="faq" component={faq} title="FAQS" backTitle="Back" />
+            <Scene key="faq" component={faq} title="FAQS" backTitle="Back" hideNavBar={true} />
             <Scene key="contact" component={contact} title="Contact" backTitle="Back" />
           </Scene>
         </Provider>

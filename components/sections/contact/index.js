@@ -15,25 +15,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     flexDirection: "column",
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
   },
   wrap: {
     flex: 1,
-    backgroundColor: "white"
   },
   inner: {
     flex: 1
   },
   tabsWrap: {
-    height: 100,
     flexDirection: "column",
     justifyContent: "flex-end"
   },
   scrollWrap: {
     alignItems: "center",
-    paddingTop: 70,
+    paddingTop: 30,
     paddingLeft: 5,
-    paddingRight: 5
+    paddingRight: 5,
   },
   buttons: {
     justifyContent: "center",

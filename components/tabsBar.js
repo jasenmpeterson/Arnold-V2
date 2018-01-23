@@ -86,7 +86,7 @@ class TabView extends React.Component {
   }
   render() {
     return (
-      <View style={{ height: 100 }}>
+      <View style={{ height: 90 }}>
         <Grid>
           <Col>
             <TouchableHighlight
