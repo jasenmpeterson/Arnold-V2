@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image } from "react-native";
+import { View, StyleSheet, ScrollView, Image, Text, Linking } from "react-native";
 import { Actions } from "react-native-router-flux";
 import HTML from "react-native-render-html";
 import {
@@ -22,6 +22,25 @@ const styles = StyleSheet.create({
   },
   inner: {
     flex: 1
+  },
+  h1: {
+    backgroundColor: "transparent",
+    color: "white",
+    textAlign: "center",
+    fontSize: responsiveFontSize(4.5)
+  },
+  h2: {
+    backgroundColor: "transparent",
+    color: "white",
+    textAlign: "center",
+    fontSize: responsiveFontSize(2.5)
+  },
+  contact: {
+    backgroundColor: "transparent",
+    color: "white"
+  },
+  lineSpacing: {
+    paddingTop: 15
   },
   tabsWrap: {
     flexDirection: "column",
@@ -123,7 +142,8 @@ const styles = StyleSheet.create({
   logoContainer: {
     justifyContent: "center",
     position: "relative",
-    top: -90
+    flex: 1,
+    padding: 50
   }
 });
 
@@ -210,15 +230,19 @@ to doing everything that we can to help our neighbors recover.
 claim, or to talk about your legal options, contact us as soon
 as possible. We look forward to being partners with you in rebuilding South Texas. 
 </p>
-<p class="contentParagraph">TEXAS OFFICE</p>
-<p class="contentParagraph address address__a">6009 Memorial Drive</p>
-<p class="contentParagraph address address__b">Phone: (888) 400-2101</p>
-<p class="contentParagraph address address__c">Fax: (713) 222-3850</p>
-<p class="contentParagraph third">Get Legal Help with Your Claim.</p>
-<p class="contentParagraph fourth">Let our Texas law firm protect your best interests.</p>
 `;
 
 export default class Contact extends Component {
+  openLink = (url) => {
+    Linking.canOpenURL(url).then(supported => {
+      if (!supported) {
+        console.log('Can\'t handle url: ' + url);
+      } else {
+        return Linking.openURL(url);
+      }
+    }).catch(err => console.error('An error occurred', err));
+  }
+
   _renderContact() {
     return (
       <View style={[styles.wrap]}>
@@ -230,21 +254,26 @@ export default class Contact extends Component {
               />
             </View>
             <View style={[styles.contentWrap]}>
-              <HTML
-                html={htmlHeader}
-                classesStyles={contentStyles.classesStyles}
-              />
+              <Text style={styles.h2}>Contact Us</Text>
+              <Text style={styles.h1} onPress={() => this.openLink(`tel:888.400.2101`)}>888.400.2101</Text>
             </View>
             <View style={[styles.pageContent]}>
               <HTML
                 html={htmlPageContent}
                 classesStyles={contentStyles.classesStyles}
               />
+              <Text style={styles.contact}>TEXAS OFFICE</Text>
+              <Text style={styles.contact}>6009 Memorial Drive</Text>
+              <Text style={styles.contact} onPress={() => this.openLink(`tel:888.400.2101`)}>Phone: 888.400.2101</Text>
+              <Text style={styles.contact}>Fax: (713) 222-3850</Text>
+              <Text style={[styles.contact, styles.lineSpacing]}>Get Legal Help with Your Claim.</Text>
+              <Text style={styles.contact}>Let our Texas law firm protect your best interests.</Text>
             </View>
             <View style={styles.logoContainer}>
               <Image
                 style={styles.logo}
                 source={require("../../../assets/images/logo_full.png")}
+                onPress={() => this.openLink(`https://www.arnolditkin.com`)}
               />
             </View>
           </ScrollView>

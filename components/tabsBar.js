@@ -128,7 +128,7 @@ class TabView extends React.Component {
             >
               <View style={[styles.tab]}>
                 <Image
-                  style={styles.icon}
+                  style={[styles.icon]}
                   source={this.props.activeCommercialState ? require("../assets/images/building_active.jpg") : require("../assets/images/building.jpg")}
                 />
                 <Text style={
@@ -169,7 +169,7 @@ class TabView extends React.Component {
             >
               <View style={[styles.tab]}>
                 <Image
-                  style={styles.icon}
+                  style={[styles.icon, styles.faq]}
                   source={this.props.activeFAQPage ? require("../assets/images/faq_active.jpg") : require("../assets/images/faq.jpg")}
                 />
                 <Text style={

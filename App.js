@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, StatusBar } from "react-native";
 import { Scene, Router, Reducer, Actions } from "react-native-router-flux";
 import OneSignal from "react-native-onesignal";
 import configureStore from "./store/configureStore";
@@ -24,6 +24,7 @@ const reducerCreate = params => {
 const store = configureStore();
 
 const refreshOnBack = () => { Actions.pop(); }
+StatusBar.setBarStyle('default', true);
 
 export default class App extends React.Component {
   componentDidMount() {
