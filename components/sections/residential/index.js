@@ -24,8 +24,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end"
   },
   scrollWrap: {
-    alignItems: "center",
-    paddingTop: 40
+    alignItems: "center"
   },
   buttons: {
     justifyContent: "center",
@@ -262,6 +261,7 @@ export default class Home extends Component {
   _renderHome() {
     return (
       <View style={[styles.wrap]}>
+        <View style={{ height: 65, width: 100, backgroundColor: "white" }}></View>
         <View style={[styles.inner]}>
           <ScrollView contentContainerStyle={[styles.scrollWrap]}>
             <View style={[styles.headerWrap]}>

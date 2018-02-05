@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end"
   },
   scrollWrap: {
-    alignItems: "center",
-    paddingTop: 40
+    alignItems: "center"
   },
   buttons: {
     justifyContent: "center",
@@ -521,9 +520,14 @@ export default class FAQ extends Component {
     this.setState({ activeSection: section });
   }
 
+  scrollTop() {
+    this.refs.activeView.scrollTo({ x: 0, y: 0, animated: true })
+  }
+
   _residentialClaims() {
     return (
       <View style={[styles.wrap]}>
+        <View style={{ height: 65, width: 100, backgroundColor: "white" }}></View>
         <View style={[styles.inner]}>
           <ScrollView contentContainerStyle={[styles.scrollWrap]}>
             <View style={[styles.headerWrap]}>
@@ -565,6 +569,7 @@ export default class FAQ extends Component {
           isActive ? styles.active : styles.inactive
         ]}
         transition="backgroundColor"
+        ref="activeView"
       >
         <Text style={styles.headerText}>{section.title}</Text>
       </Animatable.View>

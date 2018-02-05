@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image, Text, Linking } from "react-native";
+import { View, StyleSheet, ScrollView, Image, Text, Linking, Platform } from "react-native";
 import { Actions } from "react-native-router-flux";
 import HTML from "react-native-render-html";
+import email from 'react-native-email';
 import {
   responsiveFontSize,
   responsiveHeight,
@@ -268,6 +269,9 @@ export default class Contact extends Component {
               <Text style={styles.contact}>Fax: (713) 222-3850</Text>
               <Text style={[styles.contact, styles.lineSpacing]}>Get Legal Help with Your Claim.</Text>
               <Text style={styles.contact}>Let our Texas law firm protect your best interests.</Text>
+            </View>
+            <View style={{ flex: 1, width: "90%", marginTop: 20 }}>
+
             </View>
             <View style={styles.logoContainer}>
               <Image
