@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image, Text } from "react-native";
+import { View, StyleSheet, ScrollView, Image, Text, Linking } from "react-native";
 import { Actions } from "react-native-router-flux";
 import HTML from "react-native-render-html";
 import {
@@ -9,6 +9,10 @@ import {
 } from "react-native-responsive-dimensions";
 import TabsView from "../../tabsBar";
 import Button from "../../button";
+
+const DEFAULT_PROPS = {
+    onLinkPress: (evt, href) => { Linking.openURL(href); },
+}
 
 const styles = StyleSheet.create({
     wrap: {
@@ -256,6 +260,10 @@ const htmlPageContent = `
 `;
 
 export default class CommercialClaims extends Component {
+    onLinkPress (evt, href) {
+        alert(`Opened ${href} !`);
+    }
+
     _commercialClaims() {
         return (
             <View style={[styles.wrap]}>
@@ -297,6 +305,7 @@ export default class CommercialClaims extends Component {
                                     new RegExp("<li[^>]*>([\\s\\S]*?)<\\/li>", "g"),
                                     "<li><span>$1</span></li>"
                                 )}
+                                {...DEFAULT_PROPS}
                                 classesStyles={contentStyles.classesStyles}
                                 tagsStyles={{
                                     span: styles.bullet

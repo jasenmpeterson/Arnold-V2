@@ -230,8 +230,7 @@ const htmlPageContent = `
 `;
 
 const htmlPageContent__B = `
-<p class="contentParagraph first">Want to know what happens next?</p>
-<p class="contentParagraph second">Let us guide you every step of the way.</p>
+<p class="contentParagraph first">Want to know what happens next? Let us guide you every step of the way.</p>
 <p class="contentParagraph third">If you’re unsure of where to turn or what information is reliable,
 let our site be your guide. We’ve put together some of the
 most important information about insurance claims—why

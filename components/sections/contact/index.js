@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image, Text, Linking, Platform } from "react-native";
+import { View, StyleSheet, ScrollView, Image, Text, Linking, Platform, TouchableHighlight } from "react-native";
 import { Actions } from "react-native-router-flux";
 import HTML from "react-native-render-html";
 import email from 'react-native-email';
@@ -274,11 +274,12 @@ export default class Contact extends Component {
 
             </View>
             <View style={styles.logoContainer}>
-              <Image
-                style={styles.logo}
-                source={require("../../../assets/images/logo_full.png")}
-                onPress={() => this.openLink(`https://www.arnolditkin.com`)}
-              />
+                <TouchableHighlight onPress={() => this.openLink(`https://www.arnolditkin.com`)}>
+                    <Image
+                        style={styles.logo}
+                        source={require("../../../assets/images/logo_full.png")}
+                    />
+                </TouchableHighlight>
             </View>
           </ScrollView>
         </View>
