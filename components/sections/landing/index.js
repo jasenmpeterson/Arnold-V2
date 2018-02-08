@@ -6,7 +6,8 @@ import {
   ScrollView,
   Image,
   TouchableHighlight,
-  Dimensions
+  Dimensions,
+  StatusBar
 } from "react-native";
 import axios from "axios";
 import { Actions } from "react-native-router-flux";
@@ -80,37 +81,11 @@ const htmlHeader = `
 <h1 class="h1" style="font-size: 2rem">HURRICANE HARVEY</h1>
 `;
 
-export default class Landing extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     isLoading: true,
-  //     response: []
-  //   };
-  // }
-  // componentDidMount() {
-  //   return axios
-  //     .get("http://192.168.0.235:9999/landing")
-  //     .then(response => {
-  //       let ds = response;
-  //       this.setState({
-  //         isLoading: false,
-  //         response: response.data
-  //       });
-  //     })
-  //     .catch(error => {
-  //       console.warn(error);
-  //     });
-  // }
-  _renderLanding() {
-    // if (this.state.isLoading) {
-    //   return (
-    //     <View>
-    //       <Text>Loading...</Text>
-    //     </View>
-    //   );
-    // }
 
+
+export default class Landing extends Component {
+
+  _renderLanding() {
     return (
       <TouchableHighlight onPress={Actions.home} style={[styles.wrap]}>
         <ScrollView contentContainerStyle={[styles.scrollWrap]}>

@@ -507,6 +507,11 @@ const SECTIONS = [
 ];
 
 export default class FAQ extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { dimensions: undefined }
+  }
+
   state = {
     activeSection: false,
     collapsed: true
@@ -520,40 +525,53 @@ export default class FAQ extends Component {
     this.setState({ activeSection: section });
   }
 
-  scrollTop() {
-    this.refs.activeView.scrollTo({ x: 0, y: 0, animated: true })
+
+  _scrollTop = (index) => {
+    if (index) {
+      let coordinates = this.state.dimensions.height - 150;
+      this.refs.scroll.scrollTo({ x: 0, y: coordinates });
+    }
+  }
+
+  onLayout = event => {
+    if (this.state.dimensions) return // layout was already called
+    let { width, height } = event.nativeEvent.layout
+    this.setState({ dimensions: { width, height } })
   }
 
   _residentialClaims() {
     return (
-      <View style={[styles.wrap]}>
-        <View style={{ height: 65, width: 100, backgroundColor: "white" }}></View>
-        <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
-            <View style={[styles.headerWrap]}>
-              <Image
-                style={styles.image}
-                source={require("../../../assets/images/landing_image.jpg")}
-              />
-              <View style={styles.headerContent}>
-                <HTML
-                  html={htmlHeader}
-                  classesStyles={contentStyles.classesStyles}
+      <View style={{ flex: 1, alignSelf: 'stretch' }} onLayout={this.onLayout}>
+        <View style={[styles.wrap]}>
+          <View style={{ height: 65, width: 100, backgroundColor: "white" }} ref="statusBar"></View>
+          <View style={[styles.inner]} ref="wrap">
+            <ScrollView contentContainerStyle={[styles.scrollWrap]} ref="scroll">
+              <View style={[styles.headerWrap]}>
+                <Image
+                  style={styles.image}
+                  source={require("../../../assets/images/landing_image.jpg")}
+                />
+                <View style={styles.headerContent}>
+                  <HTML
+                    html={htmlHeader}
+                    classesStyles={contentStyles.classesStyles}
+                  />
+                </View>
+              </View>
+              <View style={[styles.pageContent]} ref="accordion">
+                <Accordion
+                  sections={SECTIONS}
+                  renderHeader={this._renderHeader}
+                  renderContent={this._renderContent}
+                  underlayColor="transparent"
+                  onChange={this._scrollTop}
                 />
               </View>
-            </View>
-            <View style={[styles.pageContent]}>
-              <Accordion
-                sections={SECTIONS}
-                renderHeader={this._renderHeader}
-                renderContent={this._renderContent}
-                underlayColor="transparent"
-              />
-            </View>
-          </ScrollView>
-        </View>
-        <View style={[styles.tabsWrap]}>
-          <TabsView activeFAQPage={true} />
+            </ScrollView>
+          </View>
+          <View style={[styles.tabsWrap]}>
+            <TabsView activeFAQPage={true} />
+          </View>
         </View>
       </View>
     );
@@ -590,6 +608,11 @@ export default class FAQ extends Component {
   }
 
   render() {
+    if (this.state.dimensions) {
+      var { dimensions } = this.state
+      var { width, height } = dimensions
+      console.log(dimensions);
+    }
     return this._residentialClaims();
   }
 }

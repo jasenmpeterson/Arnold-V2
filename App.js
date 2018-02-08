@@ -7,6 +7,8 @@ import configureStore from "./store/configureStore";
 import landing from "./components/sections/landing/index";
 import home from "./components/sections/home/index";
 import residentialClaims from "./components/sections/residential/index";
+import commercialClaims from "./components/sections/commercial/index";
+import commercialInsuranceClaims from "./components/sections/commercialClaims/index";
 import residentialInsuranceClaims from "./components/sections/residentialClaims/index";
 import deniedClaims from "./components/sections/deniedClaims/index";
 import damRelease from "./components/sections/damRelease/index";
@@ -59,10 +61,23 @@ export default class App extends React.Component {
               backTitle="Back"
               hideNavBar={true}
             />
+              <Scene
+                  key="commercial"
+                  component={commercialClaims}
+                  title="Commercial Claims"
+                  backTitle="Back"
+                  hideNavBar={true}
+              />
             <Scene
               key="residentialClaims"
               component={residentialInsuranceClaims}
               title="Residential Claims Process"
+              backTitle="Back"
+            />
+              <Scene
+              key="commercialClaims"
+              component={commercialInsuranceClaims}
+              title="Commercial Claims Process"
               backTitle="Back"
             />
             <Scene

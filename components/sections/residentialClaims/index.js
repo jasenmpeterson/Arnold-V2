@@ -245,7 +245,7 @@ insurance claims process:</h3>
 </ul>
 </section>
 <p class="contentParagraph">Unfortunately, here’s how it will usually go:</p>
-<p class="contentParagraph">#1 <strong>THE ADJUSTER WILL LOW-BALL YOU</strong></p>
+<p class="contentParagraph">#1 <strong>The Adjuster Will Low-ball You</strong></p>
 <p class="contentParagraph">The largest insurance companies use a business model
 that offers an initial settlement significantly lower than
 what you actually deserve. This approach capitalizes on the fact
@@ -255,16 +255,14 @@ settlement, that’s it—you’ve waived your right to demand
 more. On the other hand, if you ask for more, your claim
 could be delayed. Insurance companies know most
 residents don’t have the money or time to wait that long.</p>
-<p class="contentParagraph">#2 <strong>YOU’LL FILE AN APPEAL
-(THAT TAKES MONTHS TO RESOLVE)</strong></p>
+<p class="contentParagraph">#2 <strong>You'll File an Appeal (That Takes Months to Resolve)</strong></p>
 <p class="contentParagraph">The letter of appeal is practically a legal document.
 It needs to include an argument for why your claim was
 wrongfully denied or underpaid, as well as evidence. You may need to
 hire independent inspectors, a public adjuster, or other
 professionals to document the damage and provide an
 alternative assessment.</p>
-<p class="contentParagraph">#3 <strong>YOUR APPEAL WILL BE DENIED
-(DESPITE YOUR BEST EFFORTS)</strong></p>
+<p class="contentParagraph">#3 <strong>Your Appeal Will be Denied (Despite Your Best Efforts)</strong></p>
 <p class="contentParagraph">The profits-first business model for large insurance
 providers means making it as expensive as possible for
 you to get full payment for your claim. If they’ve already
@@ -272,8 +270,7 @@ denied your claim once, they’re more likely to deny it a
 second time—forcing you to sue them or give up. The
 key here is not to give up.  Find an attorney who has experience with
 insurance companies and a track-record for beating them.</p>
-<p class="contentParagraph">#4 <strong>YOU TAKE THEM TO COURT &
-LET THE JURY DECIDE</strong></p>
+<p class="contentParagraph">#4 <strong>You Take Them to Court & Let the Jury Decide</strong></p>
 <p class="contentParagraph">Despite their efforts to deny or underpay your claim, insurance
 companies don’t want to go to court. They know that a jury
 of your peers will have endured the same exact tragedies as
