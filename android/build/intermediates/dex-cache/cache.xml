@@ -255,6 +255,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/arnold_app_v2/react-native-mail/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="af0faf2b01a715d0e8e2833ddb6530566344f7e3">
+        <dex dex="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/pre-dexed/debug/arnold_app_v2-react-native-mail-unspecified_a304cfbeb3277a96cc4a88bf1af8d92eb466f69d.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/libs/infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"

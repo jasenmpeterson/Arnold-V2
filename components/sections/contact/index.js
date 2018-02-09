@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image, Text, Linking, Platform, TouchableHighlight } from "react-native";
-import { Actions } from "react-native-router-flux";
+import { View, StyleSheet, ScrollView, Image, Text, Linking, Alert, TouchableHighlight, Button } from "react-native";
+var Mailer = require('NativeModules').RNMail;
 import HTML from "react-native-render-html";
-import email from 'react-native-email';
 import {
   responsiveFontSize,
   responsiveHeight,
   responsiveWidth
 } from "react-native-responsive-dimensions";
 import TabsView from "../../tabsBar";
-import Button from "../../button";
 
 const styles = StyleSheet.create({
   wrap: {
@@ -145,7 +143,21 @@ const styles = StyleSheet.create({
     position: "relative",
     flex: 1,
     padding: 50
-  }
+  },
+    contactButton: {
+      width: 100,
+      marginTop: 20,
+      backgroundColor: "white",
+      padding: 10,
+      borderRadius: 4,
+      shadowOffset:{  width: 0.5,  height: 0.5  },
+      shadowColor: 'black',
+      shadowOpacity: 0.2,
+    },
+    contactButtonText: {
+      color: "#175492",
+      textAlign: "center"
+    }
 });
 
 const contentStyles = {
@@ -244,6 +256,34 @@ export default class Contact extends Component {
     }).catch(err => console.error('An error occurred', err));
   }
 
+    handleEmail = () => {
+        Mailer.mail({
+            subject: 'need help',
+            recipients: ['support@example.com'],
+            ccRecipients: ['supportCC@example.com'],
+            bccRecipients: ['supportBCC@example.com'],
+            body: '<b>A Bold Body</b>',
+            isHTML: true,
+            attachment: {
+                path: '',  // The absolute path of the file from which to read data.
+                type: '',   // Mime Type: jpg, png, doc, ppt, html, pdf
+                name: '',   // Optional: Custom filename for attachment
+            }
+        }, (error, event) => {
+            Alert.alert(
+                error,
+                event,
+                [
+                    {text: 'Ok', onPress: () => console.log('OK: Email Error Response')},
+                    {text: 'Cancel', onPress: () => console.log('CANCEL: Email Error Response')}
+                ],
+                { cancelable: true }
+            )
+        });
+    }
+
+
+
   _renderContact() {
     return (
       <View style={[styles.wrap]}>
@@ -269,12 +309,15 @@ export default class Contact extends Component {
               <Text style={styles.contact}>Fax: (713) 222-3850</Text>
               <Text style={[styles.contact, styles.lineSpacing]}>Get Legal Help with Your Claim.</Text>
               <Text style={styles.contact}>Let our Texas law firm protect your best interests.</Text>
+                <TouchableHighlight style={styles.contactButton} underlayColor={"transparent"} title="Send Mail" onPress={() => this.openLink(`mailto:info@arnolditkin?subject=Arnold & Itkin App Inquiry`)}>
+                  <Text style={styles.contactButtonText}>Email Us</Text>
+                </TouchableHighlight>
             </View>
             <View style={{ flex: 1, width: "90%", marginTop: 20 }}>
 
             </View>
             <View style={styles.logoContainer}>
-                <TouchableHighlight onPress={() => this.openLink(`https://www.arnolditkin.com`)}>
+                <TouchableHighlight onPress={() => this.openLink(`https://www.arnolditkin.com`)} underlayColor={"transparent"}>
                     <Image
                         style={styles.logo}
                         source={require("../../../assets/images/logo_full.png")}

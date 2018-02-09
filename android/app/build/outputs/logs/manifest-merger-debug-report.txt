@@ -35,6 +35,7 @@ ADDED from /Users/jasen/Projects/arnold_app_v2/android/app/src/main/AndroidManif
 		ADDED from /Users/jasen/Projects/arnold_app_v2/android/app/src/main/AndroidManifest.xml:8:22-78
 uses-sdk
 ADDED from /Users/jasen/Projects/arnold_app_v2/android/app/src/main/AndroidManifest.xml:10:5-12:41
+MERGED from [arnold_app_v2:react-native-mail:unspecified] /Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/arnold_app_v2/react-native-mail/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [arnold_app_v2:react-native-onesignal:unspecified] /Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/arnold_app_v2/react-native-onesignal/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [com.onesignal:OneSignal:3.7.1] /Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.7.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-gcm:11.0.4] /Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.4/AndroidManifest.xml:17:5-43

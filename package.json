@@ -11,7 +11,7 @@
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator=\"iPhone 6\"",
+    "ios": "react-native run-ios --simulator=\"iPad Air\"",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
@@ -26,7 +26,7 @@
     "react-native": "0.50.3",
     "react-native-collapsible": "^0.9.0",
     "react-native-easy-grid": "^0.1.15",
-    "react-native-email": "^1.0.0",
+    "react-native-mail": "^3.0.5",
     "react-native-onesignal": "^3.0.7",
     "react-native-render-html": "^3.5.2",
     "react-native-responsive-dimensions": "^1.0.2",
