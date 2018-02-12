@@ -49,9 +49,10 @@ const styles = StyleSheet.create({
     },
     scrollWrap: {
         alignItems: "center",
-        paddingTop: 30,
+        paddingTop: Platform.OS === 'ios' ? 30 : 100,
         paddingLeft: 5,
         paddingRight: 5,
+        flex: 1
     },
     buttons: {
         justifyContent: "center",
@@ -153,7 +154,7 @@ const styles = StyleSheet.create({
     },
     faqTitle: {
         color: "#FFFFFF",
-        fontSize: responsiveFontSize(3.5),
+        fontSize: responsiveFontSize(2.5),
         textAlign: "center",
         fontWeight: "bold",
         backgroundColor: "transparent",

@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView, Image, Text, Linking, Platform, TouchableHighlight } from "react-native";
-import { Actions } from "react-native-router-flux";
-import HTML from "react-native-render-html";
-import email from 'react-native-email';
 import {
     responsiveFontSize,
     responsiveHeight,
     responsiveWidth
 } from "react-native-responsive-dimensions";
 import TabsView from "../../tabsBar";
-import Button from "../../button";
 
 const styles = StyleSheet.create({
     wrap: {
@@ -49,9 +45,10 @@ const styles = StyleSheet.create({
     },
     scrollWrap: {
         alignItems: "center",
-        paddingTop: 30,
+        paddingTop: Platform.OS === 'ios' ? 30 : 100,
         paddingLeft: 5,
         paddingRight: 5,
+        flex: 1
     },
     buttons: {
         justifyContent: "center",
@@ -134,7 +131,8 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 0,
         left: 0,
-        flex: 1
+        flex: 1,
+        alignSelf: "stretch"
     },
     logo: {
         width: 120,
@@ -143,8 +141,7 @@ const styles = StyleSheet.create({
     logoContainer: {
         justifyContent: "center",
         position: "relative",
-        flex: 1,
-        padding: 50
+        flex: 1
     },
     accordionTextStyles: {
         fontSize: 14,
@@ -153,7 +150,7 @@ const styles = StyleSheet.create({
     },
     faqTitle: {
         color: "#FFFFFF",
-        fontSize: responsiveFontSize(3.5),
+        fontSize: responsiveFontSize(2.5),
         textAlign: "center",
         fontWeight: "bold",
         backgroundColor: "transparent",

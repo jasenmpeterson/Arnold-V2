@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image } from "react-native";
+import {View, StyleSheet, ScrollView, Image, Platform} from "react-native";
 import { Actions } from "react-native-router-flux";
 import HTML from "react-native-render-html";
 import {
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     },
     headerContent: {
         position: "relative",
-        top: 30
+        top:  Platform.OS === 'android' ? 50 : 30
     },
     ctaImage: {
         position: "absolute",
@@ -247,7 +247,7 @@ export default class Commercial extends Component {
     _renderCommercial() {
         return (
             <View style={[styles.wrap]}>
-                <View style={{ height: 65, width: 100, backgroundColor: "white" }}></View>
+                <View style={{ height: Platform.OS === 'ios' ? 65 : 0, width: Platform.OS === 'ios' ? 100 : 0, backgroundColor: Platform.OS === 'ios' ? "white" : "transparent"}}></View>
                 <View style={[styles.inner]}>
                     <ScrollView contentContainerStyle={[styles.scrollWrap]}>
                         <View style={[styles.headerWrap]}>

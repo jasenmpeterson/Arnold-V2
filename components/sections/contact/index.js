@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image, Text, Linking, Alert, TouchableHighlight, Button } from "react-native";
+import {
+    View, StyleSheet, ScrollView, Image, Text, Linking, Alert, TouchableHighlight, Button,
+    Platform
+} from "react-native";
 var Mailer = require('NativeModules').RNMail;
 import HTML from "react-native-render-html";
 import {
@@ -46,10 +49,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end"
   },
   scrollWrap: {
-    alignItems: "center",
-    paddingTop: 30,
-    paddingLeft: 5,
-    paddingRight: 5,
+      alignItems: "center",
+      paddingTop: Platform.OS === 'ios' ? 30 : 100,
+      paddingLeft: 5,
+      paddingRight: 5,
+      flex: 1
   },
   buttons: {
     justifyContent: "center",
@@ -309,7 +313,7 @@ export default class Contact extends Component {
               <Text style={styles.contact}>Fax: (713) 222-3850</Text>
               <Text style={[styles.contact, styles.lineSpacing]}>Get Legal Help with Your Claim.</Text>
               <Text style={styles.contact}>Let our Texas law firm protect your best interests.</Text>
-                <TouchableHighlight style={styles.contactButton} underlayColor={"transparent"} title="Send Mail" onPress={() => this.openLink(`mailto:info@arnolditkin?subject=Arnold & Itkin App Inquiry`)}>
+                <TouchableHighlight style={styles.contactButton} underlayColor={"transparent"} title="Send Mail" onPress={() => this.openLink(`mailto:info@arnolditkin.com?subject=Arnold &amp; Itkin App Inquiry`)}>
                   <Text style={styles.contactButtonText}>Email Us</Text>
                 </TouchableHighlight>
             </View>

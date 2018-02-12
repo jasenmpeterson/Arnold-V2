@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import { StatusBar, Platform } from "react-native";
 import { Scene, Router, Reducer, Actions } from "react-native-router-flux";
 import OneSignal from "react-native-onesignal";
 import configureStore from "./store/configureStore";
@@ -83,32 +83,35 @@ export default class App extends React.Component {
               component={residentialInsuranceClaims}
               title="Residential Claims Process"
               backTitle="Back"
+              hideNavBar={Platform.OS === 'android' ? true : false}
             />
               <Scene
               key="commercialClaims"
               component={commercialInsuranceClaims}
               title="Commercial Claims Process"
               backTitle="Back"
+              hideNavBar={Platform.OS === 'android' ? true : false}
             />
             <Scene
               key="deniedClaims"
               component={deniedClaims}
               title="Denied Claims"
               backTitle="Back"
+              hideNavBar={Platform.OS === 'android' ? true : false}
             />
-            <Scene key="damRelease" component={damRelease} title="Dam Release Claims" backTitle="Back" />
+            <Scene key="damRelease" component={damRelease} title="Dam Release Claims" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false} />
             <Scene key="faq" component={faq} title="FAQS" backTitle="Back" hideNavBar={true} />
-            <Scene key="faqOne" component={faqOne} title="What are my rights as an insured party?" backTitle="Back"  />
-            <Scene key="faqTwo" component={faqTwo} title="How much are my losses worth?" backTitle="Back"  />
-            <Scene key="faqThree" component={faqThree} title="Why is my claim taking so long?" backTitle="Back"  />
-            <Scene key="faqFour" component={faqFour} title="What if I had coverage but was still denied?" backTitle="Back"  />
-            <Scene key="faqFive" component={faqFive} title="What If I Don't Have Flood Insurance?" backTitle="Back"  />
-            <Scene key="faqSix" component={faqSix} title="What Do I Do If My Insurance Company Won’t Help Me Rebuild?" backTitle="Back"  />
-            <Scene key="faqSeven" component={faqSeven} title="Do I Have Options If My Insurance Isn’t Covering All of the Damage?" backTitle="Back"  />
-            <Scene key="faqEight" component={faqEight} title="What If My Insurance Won’t Cover Additional Living Expenses?" backTitle="Back"  />
-            <Scene key="faqNine" component={faqNine} title="Can I Retrieve my Items from my Home After a Prolonged Flood?" backTitle="Back"  />
-            <Scene key="faqTen" component={faqTen} title="Why Should I Hire an Attorney Before I File My Insurance Claim?" backTitle="Back"  />
-            <Scene key="contact" component={contact} title="Contact" backTitle="Back" />
+            <Scene key="faqOne" component={faqOne} title="What are my rights as an insured party?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="faqTwo" component={faqTwo} title="How much are my losses worth?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="faqThree" component={faqThree} title="Why is my claim taking so long?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="faqFour" component={faqFour} title="What if I had coverage but was still denied?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="faqFive" component={faqFive} title="What If I Don't Have Flood Insurance?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="faqSix" component={faqSix} title="What Do I Do If My Insurance Company Won’t Help Me Rebuild?" backTitle="Back"  hideNavBar={Platform.OS === 'android' ? true : false} />
+            <Scene key="faqSeven" component={faqSeven} title="Do I Have Options If My Insurance Isn’t Covering All of the Damage?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="faqEight" component={faqEight} title="What If My Insurance Won’t Cover Additional Living Expenses?" backTitle="Back"  hideNavBar={Platform.OS === 'android' ? true : false} />
+            <Scene key="faqNine" component={faqNine} title="Can I Retrieve my Items from my Home After a Prolonged Flood?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="faqTen" component={faqTen} title="Why Should I Hire an Attorney Before I File My Insurance Claim?" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false}  />
+            <Scene key="contact" component={contact} title="Contact" backTitle="Back" hideNavBar={Platform.OS === 'android' ? true : false} />
           </Scene>
         </Provider>
       </Router>
