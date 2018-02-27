@@ -223,20 +223,10 @@ const htmlPageContent = `
 <h2 class="contentSubHeader" style="font-size: 0.9rem">RESIDENTIAL</h2>
 <h1 class="contentHeader" style="font-size: 2rem">HARVEY INSURANCE<br/>CLAIMS PROCESS</h1>
 <section class="contentWrap">
-<p class="contentParagraph">The process for filing a claim should be fairly
-straightforward. First, you call an insurance company to
-report damage to your home. They will either ask you to
-fill out a report or will send an adjuster to assess the damage.
-Once the adjuster evaluates your damages, the insurance company makes
-an offer to cover the damages up to your policy’s limit, and
-you use the money to rebuild your house.</p>
-<p class="contentParagraph">Even if your initial claim is denied, you’d have the chance to
-submit an appeal where you can contest the reason for the
-denial. Failing that, you’d be able to file a civil suit to claim
-all the damages and expenses associated with the hurricane.
+<p class="contentParagraph">The process for filing a claim should be fairly straightforward. First, you call an insurance company to report damage to your home. They will either ask you to fill out a report or will send an adjuster to assess the damage. Once the adjuster evaluates your damages, the insurance company makes an offer to cover the damages up to your policy’s limit, and you use the money to rebuild your house.</p>
+<p class="contentParagraph">Even if your initial claim is denied, you’d have the chance to submit an appeal where you can contest the reason for the denial. Failing that, you’d be able to file a civil suit to claim all the damages and expenses associated with the hurricane.
 </p>
-<h3 class="contentParagraph">In an ideal world, this would be the 
-insurance claims process:</h3>
+<h3 class="contentParagraph">In an ideal world, this would be the insurance claims process:</h3>
 <section class="list">
 <ul>
 <li>File the paperwork</li>
@@ -246,56 +236,17 @@ insurance claims process:</h3>
 </section>
 <p class="contentParagraph">Unfortunately, here’s how it will usually go:</p>
 <p class="contentParagraph">#1 <strong>The Adjuster Will Low-ball You</strong></p>
-<p class="contentParagraph">The largest insurance companies use a business model
-that offers an initial settlement significantly lower than
-what you actually deserve. This approach capitalizes on the fact
-that you’re not an expert on property damage, so you’ll
-take the settlement rather than fight it. The catch is that once you accept the
-settlement, that’s it—you’ve waived your right to demand
-more. On the other hand, if you ask for more, your claim
-could be delayed. Insurance companies know most
-residents don’t have the money or time to wait that long.</p>
+<p class="contentParagraph">The largest insurance companies use a business model that offers an initial settlement significantly lower than what you actually deserve. This approach capitalizes on the fact that you’re not an expert on property damage, so you’ll take the settlement, that is less than you are owed, rather than fight it. The catch is that once you accept the settlement, that’s it—you’ve waived your right to demand more. On the other hand, if you ask for more, your claim could be delayed. Insurance companies know most residents don’t have the money or time to wait for a payout.</p>
 <p class="contentParagraph">#2 <strong>You'll File an Appeal (That Takes Months to Resolve)</strong></p>
-<p class="contentParagraph">The letter of appeal is practically a legal document.
-It needs to include an argument for why your claim was
-wrongfully denied or underpaid, as well as evidence. You may need to
-hire independent inspectors, a public adjuster, or other
-professionals to document the damage and provide an
-alternative assessment.</p>
+<p class="contentParagraph">The letter of appeal is practically a legal document. It needs to include an argument for why your claim was wrongfully denied or underpaid, as well as evidence. You may need to hire independent inspectors, a public adjuster, or other professionals to document the damage and provide an alternative assessment.</p>
 <p class="contentParagraph">#3 <strong>Your Appeal Will be Denied (Despite Your Best Efforts)</strong></p>
-<p class="contentParagraph">The profits-first business model for large insurance
-providers means making it as expensive as possible for
-you to get full payment for your claim. If they’ve already
-denied your claim once, they’re more likely to deny it a
-second time—forcing you to sue them or give up. The
-key here is not to give up.  Find an attorney who has experience with
-insurance companies and a track-record for beating them.</p>
+<p class="contentParagraph">The profits-first business model for large insurance providers means making it as expensive as possible for you to get full payment for your claim. If they’ve already denied your claim once, they’re more likely to deny it a second time—forcing you to sue them or give up. The
+key here is not to give up.  Find an attorney who has experience with insurance companies and a track-record for beating them.</p>
 <p class="contentParagraph">#4 <strong>You Take Them to Court & Let the Jury Decide</strong></p>
-<p class="contentParagraph">Despite their efforts to deny or underpay your claim, insurance
-companies don’t want to go to court. They know that a jury
-of your peers will have endured the same exact tragedies as
-you. We’ve represented countless claims where
-insurance companies played "courtroom chicken" with our 
-clients—only to settle days before trial was scheduled
-to begin.</p>
-<p class="contentParagraph">In the end, insurance companies are used to dealing with
-regular people who are easy to intimidate with the lengthy and complex claims process during a time when they are most vulnerable.</p>
-<p class="contentParagraph">Having an attorney on your side means you won’t be forced to settle for tens or hundreds of thousands of dollars less than you deserve—and being Texans means we won’t quit until our
-neighbors get what they need. Arnold & Itkin LLP has won
-billions for our clients against the same insurance companies
-you’re facing now. More importantly, we’re from Houston—
-we’re facing Harvey’s damage same as you. It’s not right
-what the insurance companies are doing to our communities
-, and we’re not going to let them take
-advantage of us.</p>
-<p class="contentParagraph">If you haven’t filed your claim yet, hiring us from the start
-means you’ll have a stronger, more proactive experience from
-the start. Our team of expert adjusters, damage assessors,
-and seasoned litigators pressure the insurance company to
-handle your claim honestly and quickly—potentially
-resulting in a much higher payout. Learn more about how
-our firm can help you (and the value of your claim) by
-reaching out to us as soon as possible.</p>
+<p class="contentParagraph">Despite their efforts to deny or underpay your claim, insurance companies don’t want to go to court. They know that a jury of your peers will have endured the same exact tragedies as you. We’ve represented countless claims where insurance companies played "courtroom chicken" with our  clients—only to settle days before trial was scheduled to begin.</p>
+<p class="contentParagraph">In the end, insurance companies are used to dealing with inexperienced homeowners who are easy to intimidate with the lengthy and complex claims process during a time when they are most vulnerable.</p>
+<p class="contentParagraph">Having an attorney on your side means you won’t be forced to settle for tens or hundreds of thousands of dollars less than you deserve—and being Texans means we won’t quit until our neighbors get what they need. Arnold & Itkin LLP has won billions for our clients against the same insurance companies you’re facing now. More importantly, we’re from Houston—we’re facing Harvey’s damage same as you. It’s not right what the insurance companies are doing to our communities, and we’re not going to let them take advantage of us.</p>
+<p class="contentParagraph">If you haven’t filed your claim yet, hiring us from the start means you’ll have a stronger, more proactive experience from the start. Our team of expert adjusters, damage assessors, and seasoned litigators pressure the insurance company to handle your claim honestly and quickly—potentially resulting in a much higher payout. Learn more about how our firm can help you (and the value of your claim) by reaching out to us as soon as possible.</p>
 </section>
 `;
 
@@ -304,11 +255,12 @@ export default class Home extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+          <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
             <View style={[styles.headerWrap]}>
               <Image
                 style={styles.image}
                 source={require("../../../assets/images/landing_image.jpg")}
+                resizeMethod='resize'
               />
               <View style={styles.headerContent}>
                 <HTML

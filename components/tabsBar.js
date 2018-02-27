@@ -107,6 +107,7 @@ class TabView extends React.Component {
                 <Image
                   style={[styles.icon]}
                   source={this.props.activeResidentialState ? require("../assets/images/umbrella_active.jpg") : require("../assets/images/umbrella.jpg")}
+                  resizeMethod='resize'
                 />
                 <Text style={
                   this.props.activeResidentialState
@@ -130,6 +131,7 @@ class TabView extends React.Component {
                 <Image
                   style={[styles.icon]}
                   source={this.props.activeCommercialState ? require("../assets/images/building_active.jpg") : require("../assets/images/building.jpg")}
+                  resizeMethod='resize'
                 />
                 <Text style={
                   this.props.activeCommercialState
@@ -153,6 +155,7 @@ class TabView extends React.Component {
                 <Image
                   style={[styles.icon, styles.homeIcon]}
                   source={this.props.activeHomeState ? require("../assets/images/logo_icon_active.jpg") : require("../assets/images/logo_icon.jpg")}
+                  resizeMethod='resize'
                 />
               </View>
             </TouchableHighlight>
@@ -171,6 +174,7 @@ class TabView extends React.Component {
                 <Image
                   style={[styles.icon, styles.faq]}
                   source={this.props.activeFAQPage ? require("../assets/images/faq_active.jpg") : require("../assets/images/faq.jpg")}
+                  resizeMethod='resize'
                 />
                 <Text style={
                   this.props.activeFAQPage
@@ -195,6 +199,7 @@ class TabView extends React.Component {
                 <Image
                   style={styles.icon}
                   source={this.props.activeContactPage ? require("../assets/images/phone_active.jpg") : require("../assets/images/phone.jpg")}
+                  resizeMethod='resize'
                 />
                 <Text style={
                   this.props.activeContactPage

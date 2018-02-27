@@ -545,11 +545,12 @@ export default class FAQ extends Component {
         <View style={[styles.wrap]}>
           <View style={{ height: 65, width: 100, backgroundColor: "white" }} ref="statusBar"></View>
           <View style={[styles.inner]} ref="wrap">
-            <ScrollView contentContainerStyle={[styles.scrollWrap]} ref="scroll">
+            <ScrollView contentContainerStyle={[styles.scrollWrap]} ref="scroll" removeClippedSubviews={true}>
               <View style={[styles.headerWrap]}>
                 <Image
                   style={styles.image}
                   source={require("../../../assets/images/landing_image.jpg")}
+                  resizeMethod='resize'
                 />
                 <View style={styles.headerContent}>
                   <HTML

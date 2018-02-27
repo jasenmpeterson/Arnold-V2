@@ -81,18 +81,16 @@ const htmlHeader = `
 <h1 class="h1" style="font-size: 2rem">HURRICANE HARVEY</h1>
 `;
 
-
-
 export default class Landing extends Component {
-
   _renderLanding() {
     return (
       <TouchableHighlight onPress={Actions.home} style={[styles.wrap]}>
-        <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+        <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
           <View style={[styles.image]}>
             <Image
               style={[styles.backgroundImage]}
               source={require("../../../assets/images/landing_image.jpg")}
+              resizeMethod='resize'
             />
           </View>
           <View style={[styles.contentWrap]}>
@@ -106,6 +104,11 @@ export default class Landing extends Component {
         </ScrollView>
       </TouchableHighlight>
     );
+  }
+
+  componentDidMount() {
+      const pushRoute = () => setTimeout(() => Actions.home(), 1000);
+      pushRoute();
   }
 
   render() {

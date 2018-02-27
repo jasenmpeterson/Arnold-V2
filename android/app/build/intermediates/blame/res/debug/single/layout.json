@@ -4,12 +4,12 @@
         "source": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/res/merged/debug/layout/redbox_view.xml",
@@ -101,7 +101,7 @@
     },
     {
         "merged": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/res/merged/debug/layout/onesignal_bgimage_notif_layout.xml",
-        "source": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.7.1/res/layout/onesignal_bgimage_notif_layout.xml"
+        "source": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.8.1/res/layout/onesignal_bgimage_notif_layout.xml"
     },
     {
         "merged": "/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",

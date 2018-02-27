@@ -237,15 +237,9 @@ const htmlHeader = `
 `;
 
 const htmlPageContent = `
-<p class="contentParagraph">If you are looking for assistance in the aftermath of
-Hurricane Harvey, our team is here to help you however we
-can. As Texans, we understand just how devastating
-this storm has been to our community, and we are committed
-to doing everything that we can to help our neighbors recover.
+<p class="contentParagraph">If you are looking for assistance in the aftermath of Hurricane Harvey, our team is here to help you however we can. As Texans, we understand just how devastating this storm has been to our community, and we are committed to doing everything that we can to help our neighbors recover.
 </p>
-<p class="contentParagraph">To learn more about how we can help with your insurance
-claim, or to talk about your legal options, contact us as soon
-as possible. We look forward to being partners with you in rebuilding South Texas. 
+<p class="contentParagraph">To learn more about how we can help with your insurance claim, or to talk about your legal options, contact us as soon as possible. We look forward to being partners with you in rebuilding South Texas. 
 </p>
 `;
 
@@ -292,10 +286,11 @@ export default class Contact extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+          <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
             <View style={[styles.image]}>
               <Image
                 source={require("../../../assets/images/gradient_background.jpg")}
+                resizeMethod='resize'
               />
             </View>
             <View style={[styles.contentWrap]}>

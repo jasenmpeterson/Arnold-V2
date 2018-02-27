@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         marginRight: 5,
         position: "relative",
-        top: -15
+        top: -15,
+        marginBottom: 20
     },
     gmapButton: {
         justifyContent: "center",
@@ -224,23 +225,15 @@ const htmlPageContent = `
 <h1 class="contentHeader" style="font-size: 2rem">HARVEY<br/>INSURANCE CLAIMS</h1>
 <section class="contentWrap">
 <p class="contentParagraph first">Getting Business Owners Back on Their Feet.</p>
-<p class="contentParagraph second">In late August 2017, one of the largest hurricanes in U.S. history made landfall on the Texas Gulf Coast, bringing with it nearly 10 trillion gallons of rain and catastrophic wind gusts.  In the aftermath, Texas business owners were left facing disastrous conditions. At Arnold & Itkin, we know how profound Harvey's impact on the business community has been, and we know how difficult it is to get insurance companies to fulfill their promises to help rebuild.</p>
+<p class="contentParagraph second">In late August 2017, one of the largest hurricanes in U.S. history made landfall on the Texas Gulf Coast, bringing with it nearly 10 trillion gallons of rain and catastrophic wind gusts. In the aftermath, Texas business owners were left facing disastrous conditions. At Arnold & Itkin, we know how profound Harvey's impact on the business community has been, and we know how difficult it is to get insurance companies to fulfill their promises to help rebuild.</p>
 <p class="contentParagraph third">If you are looking for assistance in filing a claim, have already filed a claim and received an inadequate offer, or if you're just not sure what to do next, we encourage you to contact us immediately. We can come and meet with you in person to visit your business, discuss your options, and determine the next steps of this process. As Texans, we are in this together.</p>
 </section>
 `;
 
 const htmlPageContent__B = `
 <p class="contentParagraph first">Want to know what happens next? Let us guide you every step of the way.</p>
-<p class="contentParagraph third">If you’re unsure of where to turn or what information is reliable,
-let our site be your guide. We’ve put together some of the
-most important information about insurance claims—why
-claims take so long, what you can do to expedite the process,
-the tactics insurance companies use to pressure you into
-accepting settlements, and what you can do to level the
-playing field. Use our site as a resource: file claims, ask
-questions, become informed. We’ll keep you updated on the
-latest developments regarding insurance laws while making
-sure that you understand your rights along the way. If and when you are ready for more personalized assistance, our team will be here to help. We are ready to hold your insurance company accountable for denying, delaying, or underpaying your valid claims.</p>
+<p class="contentParagraph third">If you’re unsure of where to turn or what information is reliable, let our site be your guide. We’ve put together some of the most important information about insurance claims—why claims take so long, what you can do to expedite the process,
+the tactics insurance companies use to pressure you into accepting settlements, and what you can do to level the playing field. We’ll keep you updated on the latest developments regarding insurance laws while making sure that you understand your rights along the way. If and when you are ready for more personalized assistance, our team will be here to help. We are ready to hold your insurance company accountable for denying, delaying, or underpaying your valid claims.</p>
 `;
 
 export default class Commercial extends Component {
@@ -249,11 +242,12 @@ export default class Commercial extends Component {
             <View style={[styles.wrap]}>
                 <View style={{ height: Platform.OS === 'ios' ? 65 : 0, width: Platform.OS === 'ios' ? 100 : 0, backgroundColor: Platform.OS === 'ios' ? "white" : "transparent"}}></View>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.headerWrap]}>
                             <Image
                                 style={styles.image}
                                 source={require("../../../assets/images/landing_image.jpg")}
+                                resizeMethod='resize'
                             />
                             <View style={styles.headerContent}>
                                 <HTML
@@ -301,38 +295,6 @@ export default class Commercial extends Component {
                             <Button
                                 text={"Having Trouble With Your Insurance Claim?"}
                                 action={Actions.contact}
-                                buttonStyles={styles.buttonStyles}
-                                buttonWrapStyles={styles.buttonWrapStyles}
-                                buttonTextStyles={[
-                                    styles.buttonTextStyles,
-                                    styles.buttonImageTextStyles
-                                ]}
-                                showImage={true}
-                            />
-                        </View>
-                        <View style={[styles.ctaWrap]}>
-                            <View style={[styles.cta]}>
-                                <HTML
-                                    html={htmlCTA}
-                                    classesStyles={contentStyles.classesStyles}
-                                />
-                            </View>
-                            <View style={styles.ctaImage}>
-                                <Image
-                                    style={styles.question_mark_image}
-                                    source={require("../../../assets/images/question_mark.png")}
-                                />
-                            </View>
-                        </View>
-                        <View>
-                            <Image
-                                source={require("../../../assets/images/google_map.jpg")}
-                            />
-                        </View>
-                        <View style={[styles.gmapButton]}>
-                            <Button
-                                text={"Learn Options Available to You"}
-                                action={Actions.damRelease}
                                 buttonStyles={styles.buttonStyles}
                                 buttonWrapStyles={styles.buttonWrapStyles}
                                 buttonTextStyles={[

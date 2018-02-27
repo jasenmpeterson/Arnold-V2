@@ -205,24 +205,13 @@ const htmlCTA = `
 const htmlPageContent = `
 <h1 class="contentHeader" style="font-size: 2rem">DAM<br/>RELEASE CLAIMS</h1>
 <section class="contentWrap">
-<p class="contentParagraph">The San Jacinto River Basin contains multiple floodplains
-that put hundreds of thousands of Texas homes at risk
-including tens of thousands in the greater Houston area, the
-fastest growing region in the United States. Despite officials
-knowing the risks, unregulated
-housing development allowed  homes to be built
-in the path of flood runoff. To remedy this, governmental entities created reservoirs and dams to regulate the water’s path and volume. When flood
-management officials allowed for “controlled releases” of these dams during
-Harvey, it robbed tens of thousands of homeowners of their
-most cherished and valued possessions.
+<p class="contentParagraph">The San Jacinto River Basin contains multiple floodplains that put hundreds of thousands of Texas homes at risk including tens of thousands in the greater Houston area, the fastest growing region in the United States. Despite officials knowing the risks, unregulated housing development allowed to be built in the path of flood runoff. To remedy this, governmental entities created reservoirs and dams to regulate the water’s path and volume. When flood management officials allowed for “controlled releases” of these dams during Harvey, it robbed tens of thousands of homeowners of their most cherished and valued possessions.
 </p>
-<p class="contentParagraph">During Harvey, the U.S. Army Corps
-of Engineers and the San Jacinto River Authority had an ethical obligation to consider the
-homeowners in the path of the controlled releases.
+<p class="contentParagraph">During Harvey, the U.S. Army Corps of Engineers and the San Jacinto River Authority had an ethical obligation to consider the homeowners in the path of the controlled releases.
 </p>
-<p class="contentParagraph">You may have heard the team “Inverse condemnation”. This is a legal term used to describe the “taking” of private property for public use that (by design) damages the private property or decreases its value. This is exactly what the Army Corps of Engineers and San Jacinto River Authority did when they flooded thousands of homes during the controlled releases. 
+<p class="contentParagraph">You may have heard the term “inverse condemnation”. This is a legal term used to describe the “taking” of private property for public use that (by design) damages the private property or decreases its value. This is exactly what the Army Corps of Engineers and San Jacinto River Authority did when they flooded thousands of homes during the controlled releases. 
 </p>
-<p class="contentParagraph">You may have heard the team “Inverse condemnation”. These government entities designed, maintained, and intentionally released massive amounts of water directly into areas they knew were subject to flooding, and did <strong>nothing to mitigate the flooding risk.</strong> As a result, victims in those areas may be eligible to sue for the devastating losses they sustained. 
+<p class="contentParagraph">These government entities designed, maintained, and intentionally released massive amounts of water directly into areas they knew were subject to flooding, and did <strong>nothing to mitigate the flooding risk.</strong> As a result, victims in those areas may be eligible to sue for the devastating losses they sustained. 
 </p>
 </section>
 `;
@@ -232,11 +221,12 @@ export default class Home extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+          <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
             <View style={[styles.headerWrap]}>
               <Image
                 style={styles.image}
                 source={require("../../../assets/images/landing_image.jpg")}
+                resizeMethod='resize'
               />
               <View style={styles.headerContent}>
                 <HTML

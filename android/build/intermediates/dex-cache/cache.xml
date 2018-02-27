@@ -48,6 +48,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.8.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c3c1a108b5e8c2d397e6b2df9a22541d4b665ea2">
+        <dex dex="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/pre-dexed/debug/com.onesignal-OneSignal-3.8.1_8b5caf82a3c21974c1408ff0e342213e89fd62b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/jasen/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
@@ -279,15 +288,6 @@
         revision="23.0.1"
         sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
         <dex dex="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_049c9f4a943ac5987cae21cdf4b96e4559409960.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.7.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="6cf8f13d470972c00ecb19ebacb8780a2d151111">
-        <dex dex="/Users/jasen/Projects/arnold_app_v2/android/app/build/intermediates/pre-dexed/debug/com.onesignal-OneSignal-3.7.1_7220eafbf6408945f0cf6820442f4d8e7900030e.jar" />
     </item>
     <item
         is-multidex="false"

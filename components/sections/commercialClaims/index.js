@@ -231,16 +231,16 @@ const htmlPageContent = `
 <p class="contentParagraph">#1 <strong>The Adjuster Will Offer a Fast, Low-Ball Settlement</strong></p>
 <p class="contentParagraph">The profit model for insurance companies is built on one premise: offer you as little money as possible in hopes you will take the low-ball offer because of financial pressures.</p>
 <p class="contentParagraph">#2 <strong>Your Case Will Be Delayed</strong></p>
-<p class="contentParagraph">TAdjusters are required to respond to your case within a certain amount of time, but they’re not required to pay within a specific amount of time under most policies. If they simply check in with you every 60 days or order new inspections, your claim could stay open for many months.</p>
+<p class="contentParagraph">Adjusters are required to respond to your case within a certain amount of time, but they’re not required to pay within a specific amount of time under most policies. If they simply check in with you every 60 days or order new inspections, your claim could stay open for many months.</p>
 <p class="contentParagraph">If your business was damaged, it shouldn’t take several weeks or months to confirm you need assistance. However, our firm has seen the same thing happen to other business owners we’ve represented. For most businesses, they can’t afford to delay the rebuilding process. Stopping revenue or operations for even a few weeks could destroy a company, leaving employees and owners without their livelihoods. Insurance companies know this—and they’re counting on it to twist your arm into settling.</p>
 <p class="contentParagraph">#3 <strong>Your Claim / Appeal Will Be Denied</strong></p>
 <p class="contentParagraph">Former insurance adjusters have reported using a number of tricks to put the pressure on small businesses to settle for less than they deserve. One trick is misrepresenting damage reports to allow the insurance company to deny valid claims—a practice that State Farm whistleblowers uncovered after Hurricane Sandy devastated the Northeast. Another practice was denying a claim, then filing a new damage report to justify the denial—a practice that clearly violates an insurance company’s “good faith” requirement.</p>
 <p class="contentParagraph"><strong>Business Interruption Claims</strong></p>
-<p class="contentParagraph"><a href="https://www.hurricaneharveyfirm.com/commercial/harvey-claims/flood-damage/">Flood</a> and <a href="https://www.hurricaneharveyfirm.com/commercial/harvey-claims/windstorm-damage/">windstorm</a> insurance are forms of property insurance—these policies protect your business’ physical location from the losses incurred by Hurricane Harvey. However, experts estimate that much of a business’ damage comes from business interruption: the loss of clients, revenue, and operations that a disaster invariably causes..</p>
+<p class="contentParagraph"><a href="https://www.hurricaneharveyfirm.com/commercial/harvey-claims/flood-damage/">Flood</a> and <a href="https://www.hurricaneharveyfirm.com/commercial/harvey-claims/windstorm-damage/">windstorm</a> insurance are forms of property insurance—these policies protect your business’ physical location from the losses incurred by Hurricane Harvey. However, experts estimate that much of a business’ damage comes from business interruption: the loss of clients, revenue, and operations that a disaster invariably causes.</p>
 <p class="contentParagraph"><strong>Specifically, a typical business interruption policy should cover:</strong></p>
 <section class="list">
 <ul>
-<li><strong>Lost Profits & Operated Expenses </strong><br/>Recovery can be based on financial statements and expenses from previous months.</li>
+<li><strong>Lost Profits & Operated Expenses: </strong><br/>Recovery can be based on financial statements and expenses from previous months.</li>
 <li><strong>New / Temporary Location:</strong><br/>If your business needed to move, the policy should cover the cost of moving and setting up shop in a new location.</li>
 <li><strong>Cost of Hiring or Training New Operators:</strong><br/>If you needed to find and train new operators for your equipment, the costs of hiring and training are also covered.</li>
 <li><strong>Reimbursement for Reasonable Expenses:</strong><br/>Any operating expenses not specifically covered under “fixed costs” can be reimbursed within reason.</li>
@@ -268,11 +268,12 @@ export default class CommercialClaims extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.headerWrap]}>
                             <Image
                                 style={styles.image}
                                 source={require("../../../assets/images/landing_image.jpg")}
+                                resizeMethod='resize'
                             />
                             <View style={styles.headerContent}>
                                 <HTML

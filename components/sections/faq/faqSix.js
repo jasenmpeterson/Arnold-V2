@@ -262,20 +262,21 @@ export default class FAQ extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.image]}>
                             <Image
                                 source={require("../../../assets/images/gradient_background.jpg")}
+                                resizeMethod='resize'
                             />
                         </View>
                         <View style={[styles.pageContent]}>
                             <Text style={styles.faqTitle}>What Do I Do If My Insurance Company Won’t Help Me Rebuild?</Text>
                             <Text style={styles.accordionTextStyles}>
-                                Most Houston homeowners who suffered losses from Harvey don’t have flood
+                                Most homeowners who suffered losses from Harvey don’t have flood
                                 insurance to cover their damage. Having flood damage at all usually means
                                 your costs will be excluded under your private insurance policy. So what are
                                 your options? For homeowners in specific high-risk zones, you may have the
-                                option to file an inverse condemnation claim against Harris County. Inverse
+                                option to file an inverse condemnation claim. Inverse
                                 condemnation cases allege that the government allowed a public project to
                                 put your private property at risk without your knowledge or consent.{"\n"}
                                 {"\n"}
@@ -286,8 +287,10 @@ export default class FAQ extends Component {
                                 {"\n"}
                                 - Addicks Reservoir{"\n"}
                                 - Barker Reservoir{"\n"}
-                                - Buffalo Bayou Dam{"\n"}
-                                - Housing developments in or around dams{"\n"}
+                                - Buffalo Bayou{"\n"}
+                                - Conroe{"\n"}
+                                - Kingwood{"\n"}
+                                - The West Fork of the San Jacinto River{"\n"}
                                 {"\n"}
                                 Your other option is to sue your insurance agent for bad faith. When you're
                                 sold a policy that was never intended to be fulfilled (or was designed to

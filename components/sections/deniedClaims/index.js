@@ -321,11 +321,12 @@ export default class Home extends Component {
     return (
       <View style={[styles.wrap]}>
         <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+          <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
             <View style={[styles.headerWrap]}>
               <Image
                 style={styles.image}
                 source={require("../../../assets/images/landing_image.jpg")}
+                resizeMethod='resize'
               />
               <View style={styles.headerContent}>
                 <HTML

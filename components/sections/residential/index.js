@@ -227,33 +227,19 @@ const htmlPageContent = `
 <section class="contentWrap">
 <p class="contentParagraph first">We Are Texans.</p>
 <p class="contentParagraph second">Helping Each Other Is What We Do.</p>
-<p class="contentParagraph third">In August 2017, Hurricane Harvey made landfall off the Gulf Coast in
-Texas. Within a few days, the massive storm poured
-over 27 trillion gallons of water on Texas, causing flooding at unprecedented levels. 
-Unfortunately, the devastation did not stop with the floods.
-For residents in the Corpus Christi, Rockport,
-Port Aransas, and surrounding areas, the wind speeds reached 150 mph or more, 
-completely leveling homes and businesses. As a result, hundreds of thousands of people were displaced.When people returned to their
-communities, many were left with nothing—no homes, no
-cars, few belongings of any kind. For  these victims of Harvey, their
-expected insurance payment would be all that would
-separate them from total ruin.</p>
+<p class="contentParagraph third">In August 2017, Hurricane Harvey made landfall off the Gulf Coast in Texas. Within a few days, the massive storm poured over 27 trillion gallons of water on Texas, causing flooding at unprecedented levels. 
+Unfortunately, the devastation did not stop with the floods. For residents in the Corpus Christi, Rockport, 
+Port Aransas, and surrounding areas, the wind speeds reached 150 mph or more, leveling homes and businesses. As a result, hundreds of thousands of Texans were displaced. When people returned to their
+ communities, many were left with nothing—no homes, no  cars, few belongings of any kind. For these victims of Harvey, their expected insurance payment would be all that would separate them from total ruin.</p>
 <p class="contentParagraph fourth">Unfortunately, that’s when the nightmare really started.</p>
 </section>
 `;
 
 const htmlPageContent__B = `
 <p class="contentParagraph">Want to know what happens next? Let us guide you every step of the way.</p>
-<p class="contentParagraph">If you’re unsure of where to turn or what information is reliable,
-let our site be your guide. We’ve put together some of the
-most important information about insurance claims—why
-claims take so long, what you can do to expedite the process,
-the tactics insurance companies use to pressure you into
-accepting settlements, and what you can do to level the
-playing field. Use our site as a resource: file claims, ask
-questions, become informed. We’ll keep you updated on the
-latest developments regarding insurance laws while making
-sure that you understand your rights along the way. If and when you are ready for more personalized assistance, our team will be here to help. We are ready to hold your insurance company accountable for denying, delaying, or underpaying your valid claims.</p>
+<p class="contentParagraph">If you’re unsure of where to turn or what information is reliable, let our site be your guide. We’ve put together some of the most important information about insurance claims—why 
+claims take so long, what you can do to expedite the process, the tactics insurance companies use to pressure you into accepting unfair settlements, and what you can do to level the playing field. We’ll also keep you updated on the 
+latest developments regarding insurance laws while making sure that you understand your rights. If and when you are ready for more personalized assistance, our team will be here to help. We are ready to hold your insurance company accountable for denying, delaying, or underpaying valid claims.</p>
 `;
 
 export default class Home extends Component {
@@ -262,11 +248,12 @@ export default class Home extends Component {
       <View style={[styles.wrap]}>
         <View style={{ height: Platform.OS === 'ios' ? 65 : 0, width: Platform.OS === 'ios' ? 100 : 0, backgroundColor: Platform.OS === 'ios' ? "white" : "transparent"}}></View>
         <View style={[styles.inner]}>
-          <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+          <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
             <View style={[styles.headerWrap]}>
               <Image
                 style={styles.image}
                 source={require("../../../assets/images/landing_image.jpg")}
+                resizeMethod='resize'
               />
               <View style={styles.headerContent}>
                 <HTML
@@ -334,12 +321,14 @@ export default class Home extends Component {
                 <Image
                   style={styles.question_mark_image}
                   source={require("../../../assets/images/question_mark.png")}
+                  resizeMethod='resize'
                 />
               </View>
             </View>
             <View>
               <Image
                 source={require("../../../assets/images/google_map.jpg")}
+                resizeMethod='resize'
               />
             </View>
             <View style={[styles.gmapButton]}>

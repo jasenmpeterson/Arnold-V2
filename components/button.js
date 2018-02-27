@@ -48,7 +48,7 @@ class Button extends Component {
       return (
         <TouchableHighlight style={buttonWrapStyles} onPress={action}>
           <View style={[buttonStyles]}>
-            <Image style={styles.image} resizeMethod='resize' source={this.props.image} />
+            <Image style={styles.image} resizeMethod='resize' source={this.props.image}  />
             <View style={styles.container}>
               <Text style={[buttonTextStyles]}>{text}</Text>
             </View>

@@ -262,20 +262,18 @@ export default class FAQ extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.image]}>
                             <Image
                                 source={require("../../../assets/images/gradient_background.jpg")}
+                                resizeMethod='resize'
                             />
                         </View>
                         <View style={[styles.pageContent]}>
                             <Text style={styles.faqTitle}>Why is my claim taking so long?</Text>
                             <Text style={styles.accordionTextStyles}>
                                 In the mid-1990s, the nation’s largest insurance companies—including State
-                                Farm and Allstate, the most common insurers in the greater Houston
-                                area—adopted a business strategy called the McKinsey model. This model used
-                                computers to offer settlements up to 30 percent less than what homeowners
-                                deserved. The system would prioritize payouts for people who accepted
+                                Farm and Allstate, the most common insurers in the area—adopted a business strategy that would prioritize payouts for people who accepted
                                 smaller settlements. People who demanded the settlements they actually
                                 deserved were forced to wait.{"\n"}
                                 {"\n"}
@@ -288,15 +286,14 @@ export default class FAQ extends Component {
                                 This would back insured people into a corner: either spend exorbitant
                                 amounts of money to sue the company in a case they may not even win—or take
                                 the low-ball offer. Adjusters also have a bag of tricks to extend the wait
-                                time for a claim payout. For instance, adjusters can indefinitely keep
-                                claims open as long as they check in with you on a regular basis.{"\n"}
+                                time for a claim payout.{"\n"}
                                 {"\n"}
                                 Laws govern how quickly an insurance company must respond to your claim, but
                                 how quickly they pay you is another matter. Adjusters can demand
                                 investigation into causes for virtually any reason, forcing you to wait for
                                 more inspections while your savings drain away. For most people, delayed
                                 claims mean financial disaster. This isn’t a matter of inconvenience. This
-                                is your life. A delayed claim can cause eviction, loss of medical care,
+                                is your life. A delayed claim can cause foreclosure, loss of medical care,
                                 bankruptcy, or other life-changing events. Over 25 percent of Americans
                                 can’t handle a $2,000 setback in a 30-day period. Harvey means people are
                                 facing hundreds of thousands in expenses.

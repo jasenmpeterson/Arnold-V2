@@ -258,14 +258,15 @@ export default class FAQ extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.image]}>
                             <Image
                                 source={require("../../../assets/images/gradient_background.jpg")}
+                                resizeMethod='resize'
                             />
                         </View>
                         <View style={[styles.pageContent]}>
-                            <Text style={styles.faqTitle}>What are my rights as an insured party?</Text>
+                            <Text style={styles.faqTitle}>What are my rights as an insured property owner?</Text>
                             <Text style={styles.accordionTextStyles}>
                                 Your first step is to understand the reason your claim was denied. Adjusters
                                 are required to provide an explanation for the denial. In most cases, the
@@ -281,7 +282,7 @@ export default class FAQ extends Component {
                                 {"\n"}
                                 Once you know why your claim was denied, you can appeal the decision in a
                                 letter. The letter needs to include new evidence or paperwork that would
-                                justify
+                                justify.
                             </Text>
                         </View>
                         <View style={styles.logoContainer}>

@@ -262,10 +262,11 @@ export default class FAQ extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.image]}>
                             <Image
                                 source={require("../../../assets/images/gradient_background.jpg")}
+                                resizeMethod='resize'
                             />
                         </View>
                         <View style={[styles.pageContent]}>

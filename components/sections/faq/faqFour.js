@@ -262,10 +262,11 @@ export default class FAQ extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.image]}>
                             <Image
                                 source={require("../../../assets/images/gradient_background.jpg")}
+                                resizeMethod='resize'
                             />
                         </View>
                         <View style={[styles.pageContent]}>
@@ -292,7 +293,7 @@ export default class FAQ extends Component {
                                 letter. The letter needs to include new evidence or paperwork that would
                                 justify the insurance company changing its mind. Without an attorney, the
                                 appeal will likely be costly. If an appeal is denied, your only options are
-                                a.) give up and start rebuilding with your own money, or b.) sue the
+                                give up and start rebuilding with your own money, or b.) sue the
                                 insurance company.
                             </Text>
                         </View>

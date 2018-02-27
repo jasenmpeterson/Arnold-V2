@@ -222,11 +222,12 @@ export default class Commercial extends Component {
             <View style={[styles.wrap]}>
                 <View style={{ height: Platform.OS === 'ios' ? 65 : 0, width: Platform.OS === 'ios' ? 100 : 0, backgroundColor: Platform.OS === 'ios' ? "white" : "transparent"}}></View>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.headerWrap]}>
                             <Image
                                 style={styles.image}
                                 source={require("../../../assets/images/landing_image.jpg")}
+                                resizeMethod='resize'
                             />
                             <View style={styles.headerContent}>
                                 <HTML

@@ -262,10 +262,11 @@ export default class FAQ extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.image]}>
                             <Image
                                 source={require("../../../assets/images/gradient_background.jpg")}
+                                resizeMethod='resize'
                             />
                         </View>
                         <View style={[styles.pageContent]}>
@@ -289,12 +290,11 @@ export default class FAQ extends Component {
                                 what destroyed thousands of homes downriver—even homes that were never
                                 damaged by heavy rains or high winds.{"\n"}
                                 {"\n"}
-                                Inverse condemnation claims are lawsuits against local governments for the
+                                Inverse condemnation claims are lawsuits against governmental entities for the
                                 seizing (and deliberate destruction) of private property for government use.
-                                If the SJRA or the Harris County Flood Management District destroyed your
+                                If the SJRA or the Army Corps of Engineers destroyed your
                                 home in order to "protect the dam," then it would qualify as inverse
-                                condemnation. In fact, a similar situation was allowed to proceed to trial
-                                in 2014 thanks to the Texas Supreme Court. Call (888) 400-2101 to learn if
+                                condemnation. Call (888) 400-2101 to learn if
                                 you qualify for a claim.
                             </Text>
                         </View>

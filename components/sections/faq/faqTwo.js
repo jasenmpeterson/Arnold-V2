@@ -262,10 +262,11 @@ export default class FAQ extends Component {
         return (
             <View style={[styles.wrap]}>
                 <View style={[styles.inner]}>
-                    <ScrollView contentContainerStyle={[styles.scrollWrap]}>
+                    <ScrollView contentContainerStyle={[styles.scrollWrap]} removeClippedSubviews={true}>
                         <View style={[styles.image]}>
                             <Image
                                 source={require("../../../assets/images/gradient_background.jpg")}
+                                resizeMethod='resize'
                             />
                         </View>
                         <View style={[styles.pageContent]}>
@@ -273,7 +274,7 @@ export default class FAQ extends Component {
                             <Text style={styles.accordionTextStyles}>
                                 The average household has around $25,000 in goods—including household
                                 appliances, antiques, jewelry, high-value garments, furniture, and more. In
-                                Houston, the median home size is 1,900 sq. ft., with some areas seeing 42-48
+                                Coastal Texas, the median home size is 1,900 sq. ft., with some areas seeing 42-48
                                 inches of flooding after Harvey. Taking those numbers into account, loss
                                 calculators indicate that many homeowners will be facing losses of{" "}
                                 <Text style={{ fontWeight: "bold" }}>at least $70,000</Text>—not including
